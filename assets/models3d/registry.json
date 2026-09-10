@@ -1,0 +1,42 @@
+{
+  "_comment": "Per-vehicle 3D model registry. GLB + body material name. UV 必须与 Tesla 官方 Paint Shop UV-unwrap 一致，否则贴图会碎片化。missing:true 的车型用 staticImage（整车渲染图 /assets/models/*.png）兜底，绕开 3D。",
+
+  "model3": {
+    "file": "/assets/models3d/model3.glb",
+    "bodyMaterial": "body",
+    "staticImage": "/assets/models/model3.png",
+    "source": "tscherrie/tesla-wrap-viewer",
+    "verified": true
+  },
+
+  "modely": {
+    "missing": true,
+    "staticImage": "/assets/models/modely.png",
+    "reason": "未找到 UV 匹配的 Model Y GLB；改用静态整车型参考图"
+  },
+  "modely-2025-base": {
+    "missing": true,
+    "staticImage": "/assets/models/modely-2025-base.png",
+    "reason": "未找到 UV 匹配的 2025+ Model Y GLB；改用静态整车型参考图"
+  },
+  "modely-l": {
+    "missing": true,
+    "staticImage": "/assets/models/modely-l.png",
+    "reason": "未找到 UV 匹配的 Model Y L (7 座) GLB；改用静态整车型参考图"
+  },
+  "modely-2025-performance": {
+    "missing": true,
+    "staticImage": "/assets/models/modely-2025-performance.png",
+    "reason": "未找到匹配的 2025+ Model Y Performance GLB；改用静态整车型参考图"
+  },
+  "model3-2024-base": {
+    "missing": true,
+    "staticImage": "/assets/models/model3-2024-base.png",
+    "reason": "未找到 UV 匹配的 Model 3 Highland GLB；改用静态整车型参考图"
+  },
+  "model3-2024-performance": {
+    "missing": true,
+    "staticImage": "/assets/models/model3-2024-performance.png",
+    "reason": "未找到匹配的 Model 3 Highland Performance GLB；改用静态整车型参考图"
+  }
+}
