@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Model 3 焕新版 主题涂装蓝 车机皮肤 PNG 下载 · 虚拟涂装</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚗</text></svg>">
     <meta name="description" content="Model 3 焕新版的主题涂装方案，蓝系做了降饱和处理，和中控 UI 不打架。 同一账号下可反复切换，导入过程不需要联网，车机重启后依然保留。 适合刚提车、想把车机个性化一步做到位的车主。 购买后文件长期有效，换车机或重置系统后可重新导入。">
     <link rel="canonical" href="https://1997zql.github.io/zh/skin/model3-2024-base-s0064/">
     <link rel="alternate" hreflang="zh" href="https://1997zql.github.io/zh/skin/model3-2024-base-s0064/">
@@ -254,6 +255,7 @@ footer .row{display:flex;gap:18px;flex-wrap:wrap}
 // build.js 把 __REGISTRY__ 替换成各车型 GLB 注册表的 JSON 字符串
 import * as THREE from 'three';
 import { GLTFLoader } from '/assets/vendor/three/jsm/loaders/GLTFLoader.js';
+import { DRACOLoader } from '/assets/vendor/three/jsm/loaders/DRACOLoader.js';
 import { OrbitControls } from '/assets/vendor/three/jsm/controls/OrbitControls.js';
 import { RoomEnvironment } from '/assets/vendor/three/jsm/environments/RoomEnvironment.js';
 
@@ -329,6 +331,10 @@ class WrapViewer {
     }
 
     const loader = new GLTFLoader();
+    // Draco 压缩模型解码（model3.glb 已用 gltf-transform draco 压缩，23.7MB→1.6MB）
+    const draco = new DRACOLoader();
+    draco.setDecoderPath('/assets/vendor/three/jsm/libs/draco/gltf/');
+    loader.setDRACOLoader(draco);
     loader.load(this.cfg.file, (gltf) => {
       this.scene.add(gltf.scene);
       gltf.scene.traverse((ch) => {

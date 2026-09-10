@@ -2,6 +2,7 @@
 // build.js 把 __REGISTRY__ 替换成各车型 GLB 注册表的 JSON 字符串
 import * as THREE from 'three';
 import { GLTFLoader } from '/assets/vendor/three/jsm/loaders/GLTFLoader.js';
+import { DRACOLoader } from '/assets/vendor/three/jsm/loaders/DRACOLoader.js';
 import { OrbitControls } from '/assets/vendor/three/jsm/controls/OrbitControls.js';
 import { RoomEnvironment } from '/assets/vendor/three/jsm/environments/RoomEnvironment.js';
 
@@ -77,6 +78,10 @@ class WrapViewer {
     }
 
     const loader = new GLTFLoader();
+    // Draco 压缩模型解码（model3.glb 已用 gltf-transform draco 压缩，23.7MB→1.6MB）
+    const draco = new DRACOLoader();
+    draco.setDecoderPath('/assets/vendor/three/jsm/libs/draco/gltf/');
+    loader.setDRACOLoader(draco);
     loader.load(this.cfg.file, (gltf) => {
       this.scene.add(gltf.scene);
       gltf.scene.traverse((ch) => {

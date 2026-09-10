@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Model Y 焕新标准版 主题涂装绿 车机皮肤 PNG 下载 · 虚拟涂装</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚗</text></svg>">
     <meta name="description" content="绿底色的主题涂装方案，Model Y 焕新标准版车主里选这个配色的人不算少。 1024px PNG，直接放进 U 盘根目录的 Wraps 文件夹即可识别，也可通过 Tesla App 的 Creations → Wrap 上传。 适合已经贴了膜，想让屏幕里的车跟实际颜色对上的车主。 虚拟涂装不涉及贴膜施工，不影响整车质保，也不需要备案。">
     <link rel="canonical" href="https://1997zql.github.io/zh/skin/modely-2025-base-s0093/">
     <link rel="alternate" hreflang="zh" href="https://1997zql.github.io/zh/skin/modely-2025-base-s0093/">
@@ -254,6 +255,7 @@ footer .row{display:flex;gap:18px;flex-wrap:wrap}
 // build.js 把 __REGISTRY__ 替换成各车型 GLB 注册表的 JSON 字符串
 import * as THREE from 'three';
 import { GLTFLoader } from '/assets/vendor/three/jsm/loaders/GLTFLoader.js';
+import { DRACOLoader } from '/assets/vendor/three/jsm/loaders/DRACOLoader.js';
 import { OrbitControls } from '/assets/vendor/three/jsm/controls/OrbitControls.js';
 import { RoomEnvironment } from '/assets/vendor/three/jsm/environments/RoomEnvironment.js';
 
@@ -329,6 +331,10 @@ class WrapViewer {
     }
 
     const loader = new GLTFLoader();
+    // Draco 压缩模型解码（model3.glb 已用 gltf-transform draco 压缩，23.7MB→1.6MB）
+    const draco = new DRACOLoader();
+    draco.setDecoderPath('/assets/vendor/three/jsm/libs/draco/gltf/');
+    loader.setDRACOLoader(draco);
     loader.load(this.cfg.file, (gltf) => {
       this.scene.add(gltf.scene);
       gltf.scene.traverse((ch) => {
