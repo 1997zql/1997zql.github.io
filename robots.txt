@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://1997zql.github.io/sitemap.xml
