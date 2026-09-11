@@ -64,6 +64,10 @@ background:#eef7ee;color:#2f6b2f;margin-left:6px}
 .viewer3d:active{cursor:grabbing}
 .viewer3d canvas{display:block;width:100%;height:100%}
 .viewer-fallback{background:#f5f5f5;display:flex;align-items:center;justify-content:center;color:#888}
+/* 无 GLB 车型的静态样机大图（车机屏幕边框 + 皮肤图案） */
+.viewer-static{background:radial-gradient(circle at center,#fafafa 0%,#eaeaea 100%);border-radius:12px;margin-bottom:8px;overflow:hidden;padding:22px}
+.viewer-static img{width:100%;display:block;border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,.18)}
+.viewer-static-cap{margin-top:10px;text-align:center;font-size:12px;color:#999}
 /* 无 GLB 的车型：静态车型图 + 短提示 */
 .viewer3d.viewer-static{height:auto;min-height:380px;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:default;background:linear-gradient(180deg,#fafafa 0%,#efefef 100%);padding:18px}
 .viewer3d.viewer-static canvas{display:none}
@@ -128,7 +132,7 @@ footer .row{display:flex;gap:18px;flex-wrap:wrap}
         <a href="/zh/">首页</a>
         <a href="/zh/#models">选择车型</a>
         <a href="/zh/#howto">安装教程</a>
-        <a href="/zh/account/">我的账户</a>
+        
         <a class="lang" href="/en/skin/model3-s0002/">English</a>
     </nav>
 </div></div></header>
@@ -154,11 +158,7 @@ footer .row{display:flex;gap:18px;flex-wrap:wrap}
             <button class="viewer-reset" reset-tex>还原</button>
         </div>
     </div>
-    </div>
     <div class="info">
-        <h1>Model 3 主题涂装白 车机皮肤 PNG 下载 · 虚拟涂装</h1>
-        <p class="sub">把主题涂装的质感搬到Model 3上，白版本收敛了高光，长时间看不刺眼。 文件按官方 UV 展开制作，导入后轮眉、后视镜、门把手这些细节位置都对得上。 适合节日、自驾、车友会这类想临时换个心情的场景。 文件为数字商品，导入前建议先在车机上预览效果。</p>
-        <div class="specs">
         <h1>Model 3 主题涂装白 车机皮肤 PNG 下载 · 虚拟涂装</h1>
         <p class="sub">把主题涂装的质感搬到Model 3上，白版本收敛了高光，长时间看不刺眼。 文件按官方 UV 展开制作，导入后轮眉、后视镜、门把手这些细节位置都对得上。 适合节日、自驾、车友会这类想临时换个心情的场景。 文件为数字商品，导入前建议先在车机上预览效果。</p>
         <div class="specs">
@@ -170,7 +170,7 @@ footer .row{display:flex;gap:18px;flex-wrap:wrap}
             <div class="spec"><span>文件大小</span><span>271 KB</span></div>
         </div>
         <a class="btn" href="/assets/download/model3-s0002.png" download>免费下载</a>
-               <p class="note">付款后下载链接会自动发到你邮箱，请检查垃圾邮件</p>
+               <p class="note">免费下载 PNG，按下方教程 30 秒装进车机即可</p>
     </div>
 </div></div>
 <section><div class="wrap"><h2>设计要点</h2>
@@ -488,19 +488,16 @@ if (document.readyState === 'loading') {
 document.addEventListener('click', (e) => {
   const card = e.target.closest('[data-viewer][data-skin-url]');
   if (!card) return;
-  // <a> 卡片允许默认跳转
-  if (card.tagName === 'A' && card.dataset.nav !== '1') return;
+  // 列表卡（data-nav="1"，车型页网格/首页精选）：一律放行默认跳转进详情页
+  // 就地换肤只发生在详情页 related 卡上，未 ready 时静默（div 本无默认行为）
+  if (card.dataset.nav === '1') return;
   const id = card.dataset.viewer;
   const url = card.dataset.skinUrl;
   const root = document.getElementById(id);
-  if (!root || !root._viewer) return;
-  if (root._viewerReady) {
-    root._viewer.apply(url);
-    document.querySelectorAll('[data-viewer="' + id + '"]').forEach((c) => c.classList.remove('active'));
-    card.classList.add('active');
-  }
-  // 详情页 / 车型页 related（不是 <a>，是 <div>）：阻止默认以防外层链接冒泡
-  e.preventDefault();
+  if (!root || !root._viewer || !root._viewerReady) return;
+  root._viewer.apply(url);
+  document.querySelectorAll('[data-viewer="' + id + '"]').forEach((c) => c.classList.remove('active'));
+  card.classList.add('active');
 });
 
 // [apply-tex] 按钮：轮换 data-related 里的下一张

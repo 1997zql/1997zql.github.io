@@ -235,19 +235,16 @@ if (document.readyState === 'loading') {
 document.addEventListener('click', (e) => {
   const card = e.target.closest('[data-viewer][data-skin-url]');
   if (!card) return;
-  // <a> 卡片允许默认跳转
-  if (card.tagName === 'A' && card.dataset.nav !== '1') return;
+  // 列表卡（data-nav="1"，车型页网格/首页精选）：一律放行默认跳转进详情页
+  // 就地换肤只发生在详情页 related 卡上，未 ready 时静默（div 本无默认行为）
+  if (card.dataset.nav === '1') return;
   const id = card.dataset.viewer;
   const url = card.dataset.skinUrl;
   const root = document.getElementById(id);
-  if (!root || !root._viewer) return;
-  if (root._viewerReady) {
-    root._viewer.apply(url);
-    document.querySelectorAll('[data-viewer="' + id + '"]').forEach((c) => c.classList.remove('active'));
-    card.classList.add('active');
-  }
-  // 详情页 / 车型页 related（不是 <a>，是 <div>）：阻止默认以防外层链接冒泡
-  e.preventDefault();
+  if (!root || !root._viewer || !root._viewerReady) return;
+  root._viewer.apply(url);
+  document.querySelectorAll('[data-viewer="' + id + '"]').forEach((c) => c.classList.remove('active'));
+  card.classList.add('active');
 });
 
 // [apply-tex] 按钮：轮换 data-related 里的下一张

@@ -12,14 +12,14 @@
     <meta property="og:title" content="Model Y Paint Shop Wrap PNGs · 135 designs">
     <meta property="og:description" content="135 virtual wrap designs for the Model Y across multiple styles and colours. Every file matches Tesla Paint Shop specs and loads straight in.">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://1997zql.github.io/assets/preview/modely-s0001.webp">
+    <meta property="og:image" content="https://1997zql.github.io/assets/mockups/modely-s0001.webp">
     <meta property="og:image:width" content="900">
     <meta property="og:image:height" content="1000">
     <meta property="og:image:alt" content="Model Y Paint Shop Wrap PNGs · 135 designs">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Model Y Paint Shop Wrap PNGs · 135 designs">
     <meta name="twitter:description" content="135 virtual wrap designs for the Model Y across multiple styles and colours. Every file matches Tesla Paint Shop specs and loads straight in.">
-    <meta name="twitter:image" content="https://1997zql.github.io/assets/preview/modely-s0001.webp">
+    <meta name="twitter:image" content="https://1997zql.github.io/assets/mockups/modely-s0001.webp">
     <meta name="robots" content="index,follow">
     <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -64,6 +64,10 @@ background:#eef7ee;color:#2f6b2f;margin-left:6px}
 .viewer3d:active{cursor:grabbing}
 .viewer3d canvas{display:block;width:100%;height:100%}
 .viewer-fallback{background:#f5f5f5;display:flex;align-items:center;justify-content:center;color:#888}
+/* 无 GLB 车型的静态样机大图（车机屏幕边框 + 皮肤图案） */
+.viewer-static{background:radial-gradient(circle at center,#fafafa 0%,#eaeaea 100%);border-radius:12px;margin-bottom:8px;overflow:hidden;padding:22px}
+.viewer-static img{width:100%;display:block;border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,.18)}
+.viewer-static-cap{margin-top:10px;text-align:center;font-size:12px;color:#999}
 /* 无 GLB 的车型：静态车型图 + 短提示 */
 .viewer3d.viewer-static{height:auto;min-height:380px;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:default;background:linear-gradient(180deg,#fafafa 0%,#efefef 100%);padding:18px}
 .viewer3d.viewer-static canvas{display:none}
@@ -118,7 +122,7 @@ footer{border-top:1px solid #ececec;padding:28px 0;font-size:13px;color:#999}
 footer .row{display:flex;gap:18px;flex-wrap:wrap}
 </style>
     
-    <script type="importmap">{"imports":{"three":"https://1997zql.github.io/assets/vendor/three/build/three.module.js"}}</script>
+    
     
 </head>
 <body>
@@ -128,700 +132,694 @@ footer .row{display:flex;gap:18px;flex-wrap:wrap}
         <a href="/en/">Home</a>
         <a href="/en/#models">Vehicles</a>
         <a href="/en/#howto">How to install</a>
-        <a href="/en/account/">My account</a>
+        
         <a class="lang" href="/zh/model/modely/">中文</a>
     </nav>
 </div></div></header>
 
 <div class="wrap"><div class="model-browser">
     <div>
-        <div id="viewer-modely" class="viewer3d viewer"
-             data-model="modely"
-             data-default-skin-url="/assets/download/modely-s0001.png"
-             data-status-init="Loading 3D model…"
-             data-status-applied="Wrap applied to model"
-             data-status-error="Could not load 3D, please retry"
-             data-status-fallback="Reference vehicle shown — 3D preview is coming soon"
-             data-auto-rotate="1">
-            <p class="viewer-tip">Drag to rotate · shows pattern · Model Y</p>
+        <div class="viewer-static">
+            <img src="/assets/mockups/modely-s0001.webp" alt="Model Y">
+            <p class="viewer-static-cap">Car screen preview · 3D live try-on for this model is coming soon</p>
         </div>
     </div>
     <div>
         <h1>Model Y</h1>
         <p class="sub">135 wraps · 135 virtual wrap designs for the Model Y across multiple styles and colours. Every file matches Tesla Paint Shop specs and loads straight in.</p>
         <div class="picks">
-            <a class="card active" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0001.png" data-nav="1" href="/en/skin/modely-s0001/">
-                <img src="/assets/preview/modely-s0001.webp" alt="Theme Livery" loading="lazy">
+            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0001.png" data-nav="1" href="/en/skin/modely-s0001/">
+                <img src="/assets/mockups/modely-s0001.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Blue</div>
                 <div class="m"><span class="badge">Download free</span></div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0002.png" data-nav="1" href="/en/skin/modely-s0002/">
-                <img src="/assets/preview/modely-s0002.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0002.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · White</div>
                 <div class="m"><span class="badge">Download free</span></div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0003.png" data-nav="1" href="/en/skin/modely-s0003/">
-                <img src="/assets/preview/modely-s0003.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0003.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Blue</div>
                 <div class="m"><span class="badge">Download free</span></div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0004.png" data-nav="1" href="/en/skin/modely-s0004/">
-                <img src="/assets/preview/modely-s0004.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0004.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Orange</div>
                 <div class="m">$1</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0005.png" data-nav="1" href="/en/skin/modely-s0005/">
-                <img src="/assets/preview/modely-s0005.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0005.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m">$2</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0006.png" data-nav="1" href="/en/skin/modely-s0006/">
-                <img src="/assets/preview/modely-s0006.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0006.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m">$1</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0007.png" data-nav="1" href="/en/skin/modely-s0007/">
-                <img src="/assets/preview/modely-s0007.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0007.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Orange</div>
                 <div class="m">$1</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0008.png" data-nav="1" href="/en/skin/modely-s0008/">
-                <img src="/assets/preview/modely-s0008.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0008.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Gray</div>
                 <div class="m">$2</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0009.png" data-nav="1" href="/en/skin/modely-s0009/">
-                <img src="/assets/preview/modely-s0009.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0009.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Orange</div>
                 <div class="m">$3</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0010.png" data-nav="1" href="/en/skin/modely-s0010/">
-                <img src="/assets/preview/modely-s0010.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0010.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Blue</div>
                 <div class="m">$3</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0011.png" data-nav="1" href="/en/skin/modely-s0011/">
-                <img src="/assets/preview/modely-s0011.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0011.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Orange</div>
                 <div class="m">$3</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0012.png" data-nav="1" href="/en/skin/modely-s0012/">
-                <img src="/assets/preview/modely-s0012.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0012.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m">$2</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0013.png" data-nav="1" href="/en/skin/modely-s0013/">
-                <img src="/assets/preview/modely-s0013.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0013.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m">$1</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0014.png" data-nav="1" href="/en/skin/modely-s0014/">
-                <img src="/assets/preview/modely-s0014.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0014.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m">$2</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0015.png" data-nav="1" href="/en/skin/modely-s0015/">
-                <img src="/assets/preview/modely-s0015.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0015.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Green</div>
                 <div class="m">$1</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0016.png" data-nav="1" href="/en/skin/modely-s0016/">
-                <img src="/assets/preview/modely-s0016.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0016.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Blue</div>
                 <div class="m">$2</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0017.png" data-nav="1" href="/en/skin/modely-s0017/">
-                <img src="/assets/preview/modely-s0017.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0017.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Teal</div>
                 <div class="m">$2</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0018.png" data-nav="1" href="/en/skin/modely-s0018/">
-                <img src="/assets/preview/modely-s0018.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0018.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Green</div>
                 <div class="m"><span class="badge">Download free</span></div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0019.png" data-nav="1" href="/en/skin/modely-s0019/">
-                <img src="/assets/preview/modely-s0019.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0019.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m">$2</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0020.png" data-nav="1" href="/en/skin/modely-s0020/">
-                <img src="/assets/preview/modely-s0020.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0020.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m">$2</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0021.png" data-nav="1" href="/en/skin/modely-s0021/">
-                <img src="/assets/preview/modely-s0021.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0021.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Orange</div>
                 <div class="m">$2</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0022.png" data-nav="1" href="/en/skin/modely-s0022/">
-                <img src="/assets/preview/modely-s0022.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0022.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m">$2</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0023.png" data-nav="1" href="/en/skin/modely-s0023/">
-                <img src="/assets/preview/modely-s0023.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0023.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Blue</div>
                 <div class="m">$1</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0024.png" data-nav="1" href="/en/skin/modely-s0024/">
-                <img src="/assets/preview/modely-s0024.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0024.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m">$2</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0025.png" data-nav="1" href="/en/skin/modely-s0025/">
-                <img src="/assets/preview/modely-s0025.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0025.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Blue</div>
                 <div class="m">$2</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0026.png" data-nav="1" href="/en/skin/modely-s0026/">
-                <img src="/assets/preview/modely-s0026.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0026.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m">$2</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0027.png" data-nav="1" href="/en/skin/modely-s0027/">
-                <img src="/assets/preview/modely-s0027.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0027.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · White</div>
                 <div class="m">$3</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0028.png" data-nav="1" href="/en/skin/modely-s0028/">
-                <img src="/assets/preview/modely-s0028.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0028.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Green</div>
                 <div class="m">$1</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0029.png" data-nav="1" href="/en/skin/modely-s0029/">
-                <img src="/assets/preview/modely-s0029.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0029.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Black</div>
                 <div class="m">$1</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0030.png" data-nav="1" href="/en/skin/modely-s0030/">
-                <img src="/assets/preview/modely-s0030.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0030.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Blue</div>
                 <div class="m">$3</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0031.png" data-nav="1" href="/en/skin/modely-s0031/">
-                <img src="/assets/preview/modely-s0031.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0031.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Blue</div>
                 <div class="m">$2</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0032.png" data-nav="1" href="/en/skin/modely-s0032/">
-                <img src="/assets/preview/modely-s0032.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0032.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Blue</div>
                 <div class="m">$2</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0033.png" data-nav="1" href="/en/skin/modely-s0033/">
-                <img src="/assets/preview/modely-s0033.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0033.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m"><span class="badge">Download free</span></div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0034.png" data-nav="1" href="/en/skin/modely-s0034/">
-                <img src="/assets/preview/modely-s0034.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0034.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Teal</div>
                 <div class="m">$2</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0035.png" data-nav="1" href="/en/skin/modely-s0035/">
-                <img src="/assets/preview/modely-s0035.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0035.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Blue</div>
                 <div class="m">$2</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0036.png" data-nav="1" href="/en/skin/modely-s0036/">
-                <img src="/assets/preview/modely-s0036.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0036.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Blue</div>
                 <div class="m">$2</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0037.png" data-nav="1" href="/en/skin/modely-s0037/">
-                <img src="/assets/preview/modely-s0037.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0037.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Teal</div>
                 <div class="m">$3</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0038.png" data-nav="1" href="/en/skin/modely-s0038/">
-                <img src="/assets/preview/modely-s0038.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0038.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · White</div>
                 <div class="m">$2</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0039.png" data-nav="1" href="/en/skin/modely-s0039/">
-                <img src="/assets/preview/modely-s0039.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0039.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · White</div>
                 <div class="m">$2</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0040.png" data-nav="1" href="/en/skin/modely-s0040/">
-                <img src="/assets/preview/modely-s0040.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0040.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Pink</div>
                 <div class="m">$2</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0041.png" data-nav="1" href="/en/skin/modely-s0041/">
-                <img src="/assets/preview/modely-s0041.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0041.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Blue</div>
                 <div class="m">$1</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0042.png" data-nav="1" href="/en/skin/modely-s0042/">
-                <img src="/assets/preview/modely-s0042.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0042.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Blue</div>
                 <div class="m">$2</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0043.png" data-nav="1" href="/en/skin/modely-s0043/">
-                <img src="/assets/preview/modely-s0043.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0043.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m">$2</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0044.png" data-nav="1" href="/en/skin/modely-s0044/">
-                <img src="/assets/preview/modely-s0044.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0044.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · White</div>
                 <div class="m">$1</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0045.png" data-nav="1" href="/en/skin/modely-s0045/">
-                <img src="/assets/preview/modely-s0045.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0045.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m">$2</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0046.png" data-nav="1" href="/en/skin/modely-s0046/">
-                <img src="/assets/preview/modely-s0046.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0046.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · White</div>
                 <div class="m">$2</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0047.png" data-nav="1" href="/en/skin/modely-s0047/">
-                <img src="/assets/preview/modely-s0047.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0047.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m">$3</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0048.png" data-nav="1" href="/en/skin/modely-s0048/">
-                <img src="/assets/preview/modely-s0048.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0048.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Orange</div>
                 <div class="m"><span class="badge">Download free</span></div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0049.png" data-nav="1" href="/en/skin/modely-s0049/">
-                <img src="/assets/preview/modely-s0049.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0049.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · White</div>
                 <div class="m">$1</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0050.png" data-nav="1" href="/en/skin/modely-s0050/">
-                <img src="/assets/preview/modely-s0050.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0050.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Black</div>
                 <div class="m">$2</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0051.png" data-nav="1" href="/en/skin/modely-s0051/">
-                <img src="/assets/preview/modely-s0051.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0051.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Black</div>
                 <div class="m">$3</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0052.png" data-nav="1" href="/en/skin/modely-s0052/">
-                <img src="/assets/preview/modely-s0052.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0052.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · White</div>
                 <div class="m">$3</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0053.png" data-nav="1" href="/en/skin/modely-s0053/">
-                <img src="/assets/preview/modely-s0053.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0053.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m">$3</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0054.png" data-nav="1" href="/en/skin/modely-s0054/">
-                <img src="/assets/preview/modely-s0054.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0054.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Pink</div>
                 <div class="m">$2</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0055.png" data-nav="1" href="/en/skin/modely-s0055/">
-                <img src="/assets/preview/modely-s0055.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0055.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Orange</div>
                 <div class="m">$2</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0056.png" data-nav="1" href="/en/skin/modely-s0056/">
-                <img src="/assets/preview/modely-s0056.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0056.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Blue</div>
                 <div class="m">$3</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0057.png" data-nav="1" href="/en/skin/modely-s0057/">
-                <img src="/assets/preview/modely-s0057.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0057.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · White</div>
                 <div class="m">$2</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0058.png" data-nav="1" href="/en/skin/modely-s0058/">
-                <img src="/assets/preview/modely-s0058.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0058.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m">$2</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0059.png" data-nav="1" href="/en/skin/modely-s0059/">
-                <img src="/assets/preview/modely-s0059.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0059.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m">$2</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0060.png" data-nav="1" href="/en/skin/modely-s0060/">
-                <img src="/assets/preview/modely-s0060.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0060.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Gray</div>
                 <div class="m">$2</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0061.png" data-nav="1" href="/en/skin/modely-s0061/">
-                <img src="/assets/preview/modely-s0061.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0061.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Blue</div>
                 <div class="m">$2</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0062.png" data-nav="1" href="/en/skin/modely-s0062/">
-                <img src="/assets/preview/modely-s0062.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0062.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m">$2</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0063.png" data-nav="1" href="/en/skin/modely-s0063/">
-                <img src="/assets/preview/modely-s0063.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0063.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · White</div>
                 <div class="m"><span class="badge">Download free</span></div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0064.png" data-nav="1" href="/en/skin/modely-s0064/">
-                <img src="/assets/preview/modely-s0064.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0064.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Orange</div>
                 <div class="m">$1</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0065.png" data-nav="1" href="/en/skin/modely-s0065/">
-                <img src="/assets/preview/modely-s0065.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0065.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · White</div>
                 <div class="m">$2</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0066.png" data-nav="1" href="/en/skin/modely-s0066/">
-                <img src="/assets/preview/modely-s0066.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0066.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m">$2</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0067.png" data-nav="1" href="/en/skin/modely-s0067/">
-                <img src="/assets/preview/modely-s0067.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0067.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m">$2</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0068.png" data-nav="1" href="/en/skin/modely-s0068/">
-                <img src="/assets/preview/modely-s0068.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0068.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Orange</div>
                 <div class="m">$3</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0069.png" data-nav="1" href="/en/skin/modely-s0069/">
-                <img src="/assets/preview/modely-s0069.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0069.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m">$2</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0070.png" data-nav="1" href="/en/skin/modely-s0070/">
-                <img src="/assets/preview/modely-s0070.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0070.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Blue</div>
                 <div class="m">$3</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0071.png" data-nav="1" href="/en/skin/modely-s0071/">
-                <img src="/assets/preview/modely-s0071.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0071.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Gold</div>
                 <div class="m">$2</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0072.png" data-nav="1" href="/en/skin/modely-s0072/">
-                <img src="/assets/preview/modely-s0072.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0072.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · White</div>
                 <div class="m">$1</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0073.png" data-nav="1" href="/en/skin/modely-s0073/">
-                <img src="/assets/preview/modely-s0073.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0073.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Teal</div>
                 <div class="m">$3</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0074.png" data-nav="1" href="/en/skin/modely-s0074/">
-                <img src="/assets/preview/modely-s0074.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0074.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Gold</div>
                 <div class="m">$1</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0075.png" data-nav="1" href="/en/skin/modely-s0075/">
-                <img src="/assets/preview/modely-s0075.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0075.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · White</div>
                 <div class="m">$1</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0076.png" data-nav="1" href="/en/skin/modely-s0076/">
-                <img src="/assets/preview/modely-s0076.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0076.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Orange</div>
                 <div class="m">$2</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0077.png" data-nav="1" href="/en/skin/modely-s0077/">
-                <img src="/assets/preview/modely-s0077.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0077.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · White</div>
                 <div class="m">$2</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0078.png" data-nav="1" href="/en/skin/modely-s0078/">
-                <img src="/assets/preview/modely-s0078.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0078.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m"><span class="badge">Download free</span></div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0079.png" data-nav="1" href="/en/skin/modely-s0079/">
-                <img src="/assets/preview/modely-s0079.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0079.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m">$2</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0080.png" data-nav="1" href="/en/skin/modely-s0080/">
-                <img src="/assets/preview/modely-s0080.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0080.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m">$3</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0081.png" data-nav="1" href="/en/skin/modely-s0081/">
-                <img src="/assets/preview/modely-s0081.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0081.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Blue</div>
                 <div class="m">$2</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0082.png" data-nav="1" href="/en/skin/modely-s0082/">
-                <img src="/assets/preview/modely-s0082.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0082.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Gray</div>
                 <div class="m">$2</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0083.png" data-nav="1" href="/en/skin/modely-s0083/">
-                <img src="/assets/preview/modely-s0083.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0083.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Blue</div>
                 <div class="m">$3</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0084.png" data-nav="1" href="/en/skin/modely-s0084/">
-                <img src="/assets/preview/modely-s0084.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0084.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m">$3</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0085.png" data-nav="1" href="/en/skin/modely-s0085/">
-                <img src="/assets/preview/modely-s0085.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0085.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Gray</div>
                 <div class="m">$1</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0086.png" data-nav="1" href="/en/skin/modely-s0086/">
-                <img src="/assets/preview/modely-s0086.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0086.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Green</div>
                 <div class="m">$2</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0087.png" data-nav="1" href="/en/skin/modely-s0087/">
-                <img src="/assets/preview/modely-s0087.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0087.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Blue</div>
                 <div class="m">$3</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0088.png" data-nav="1" href="/en/skin/modely-s0088/">
-                <img src="/assets/preview/modely-s0088.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0088.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Blue</div>
                 <div class="m">$3</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0089.png" data-nav="1" href="/en/skin/modely-s0089/">
-                <img src="/assets/preview/modely-s0089.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0089.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m">$2</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0090.png" data-nav="1" href="/en/skin/modely-s0090/">
-                <img src="/assets/preview/modely-s0090.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0090.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Teal</div>
                 <div class="m">$2</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0091.png" data-nav="1" href="/en/skin/modely-s0091/">
-                <img src="/assets/preview/modely-s0091.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0091.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Blue</div>
                 <div class="m">$1</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0092.png" data-nav="1" href="/en/skin/modely-s0092/">
-                <img src="/assets/preview/modely-s0092.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0092.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m">$2</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0093.png" data-nav="1" href="/en/skin/modely-s0093/">
-                <img src="/assets/preview/modely-s0093.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0093.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Blue</div>
                 <div class="m"><span class="badge">Download free</span></div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0094.png" data-nav="1" href="/en/skin/modely-s0094/">
-                <img src="/assets/preview/modely-s0094.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0094.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m">$3</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0095.png" data-nav="1" href="/en/skin/modely-s0095/">
-                <img src="/assets/preview/modely-s0095.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0095.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m">$3</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0096.png" data-nav="1" href="/en/skin/modely-s0096/">
-                <img src="/assets/preview/modely-s0096.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0096.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Pink</div>
                 <div class="m">$3</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0097.png" data-nav="1" href="/en/skin/modely-s0097/">
-                <img src="/assets/preview/modely-s0097.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0097.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Pink</div>
                 <div class="m">$2</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0098.png" data-nav="1" href="/en/skin/modely-s0098/">
-                <img src="/assets/preview/modely-s0098.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0098.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Gold</div>
                 <div class="m">$2</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0099.png" data-nav="1" href="/en/skin/modely-s0099/">
-                <img src="/assets/preview/modely-s0099.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0099.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m">$2</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0100.png" data-nav="1" href="/en/skin/modely-s0100/">
-                <img src="/assets/preview/modely-s0100.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0100.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m">$1</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0101.png" data-nav="1" href="/en/skin/modely-s0101/">
-                <img src="/assets/preview/modely-s0101.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0101.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Orange</div>
                 <div class="m">$2</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0102.png" data-nav="1" href="/en/skin/modely-s0102/">
-                <img src="/assets/preview/modely-s0102.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0102.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · White</div>
                 <div class="m">$2</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0103.png" data-nav="1" href="/en/skin/modely-s0103/">
-                <img src="/assets/preview/modely-s0103.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0103.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Blue</div>
                 <div class="m">$3</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0104.png" data-nav="1" href="/en/skin/modely-s0104/">
-                <img src="/assets/preview/modely-s0104.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0104.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Gray</div>
                 <div class="m">$2</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0105.png" data-nav="1" href="/en/skin/modely-s0105/">
-                <img src="/assets/preview/modely-s0105.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0105.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Teal</div>
                 <div class="m">$2</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0106.png" data-nav="1" href="/en/skin/modely-s0106/">
-                <img src="/assets/preview/modely-s0106.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0106.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Gray</div>
                 <div class="m">$3</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0107.png" data-nav="1" href="/en/skin/modely-s0107/">
-                <img src="/assets/preview/modely-s0107.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0107.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Gray</div>
                 <div class="m">$3</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0108.png" data-nav="1" href="/en/skin/modely-s0108/">
-                <img src="/assets/preview/modely-s0108.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0108.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Blue</div>
                 <div class="m"><span class="badge">Download free</span></div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0109.png" data-nav="1" href="/en/skin/modely-s0109/">
-                <img src="/assets/preview/modely-s0109.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0109.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · White</div>
                 <div class="m">$2</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0110.png" data-nav="1" href="/en/skin/modely-s0110/">
-                <img src="/assets/preview/modely-s0110.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0110.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Gold</div>
                 <div class="m">$2</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0111.png" data-nav="1" href="/en/skin/modely-s0111/">
-                <img src="/assets/preview/modely-s0111.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0111.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · White</div>
                 <div class="m">$1</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0112.png" data-nav="1" href="/en/skin/modely-s0112/">
-                <img src="/assets/preview/modely-s0112.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0112.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Gray</div>
                 <div class="m">$3</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0113.png" data-nav="1" href="/en/skin/modely-s0113/">
-                <img src="/assets/preview/modely-s0113.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0113.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Blue</div>
                 <div class="m">$1</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0114.png" data-nav="1" href="/en/skin/modely-s0114/">
-                <img src="/assets/preview/modely-s0114.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0114.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · White</div>
                 <div class="m">$3</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0115.png" data-nav="1" href="/en/skin/modely-s0115/">
-                <img src="/assets/preview/modely-s0115.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0115.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m">$3</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0116.png" data-nav="1" href="/en/skin/modely-s0116/">
-                <img src="/assets/preview/modely-s0116.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0116.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Orange</div>
                 <div class="m">$1</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0117.png" data-nav="1" href="/en/skin/modely-s0117/">
-                <img src="/assets/preview/modely-s0117.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0117.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · White</div>
                 <div class="m">$1</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0118.png" data-nav="1" href="/en/skin/modely-s0118/">
-                <img src="/assets/preview/modely-s0118.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0118.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m">$3</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0119.png" data-nav="1" href="/en/skin/modely-s0119/">
-                <img src="/assets/preview/modely-s0119.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0119.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Purple</div>
                 <div class="m">$3</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0120.png" data-nav="1" href="/en/skin/modely-s0120/">
-                <img src="/assets/preview/modely-s0120.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0120.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Blue</div>
                 <div class="m">$1</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0121.png" data-nav="1" href="/en/skin/modely-s0121/">
-                <img src="/assets/preview/modely-s0121.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0121.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Purple</div>
                 <div class="m">$3</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0122.png" data-nav="1" href="/en/skin/modely-s0122/">
-                <img src="/assets/preview/modely-s0122.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0122.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m">$2</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0123.png" data-nav="1" href="/en/skin/modely-s0123/">
-                <img src="/assets/preview/modely-s0123.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0123.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · White</div>
                 <div class="m"><span class="badge">Download free</span></div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0124.png" data-nav="1" href="/en/skin/modely-s0124/">
-                <img src="/assets/preview/modely-s0124.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0124.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Orange</div>
                 <div class="m">$2</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0125.png" data-nav="1" href="/en/skin/modely-s0125/">
-                <img src="/assets/preview/modely-s0125.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0125.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m">$3</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0126.png" data-nav="1" href="/en/skin/modely-s0126/">
-                <img src="/assets/preview/modely-s0126.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0126.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Orange</div>
                 <div class="m">$3</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0127.png" data-nav="1" href="/en/skin/modely-s0127/">
-                <img src="/assets/preview/modely-s0127.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0127.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Gold</div>
                 <div class="m">$2</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0128.png" data-nav="1" href="/en/skin/modely-s0128/">
-                <img src="/assets/preview/modely-s0128.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0128.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m">$3</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0129.png" data-nav="1" href="/en/skin/modely-s0129/">
-                <img src="/assets/preview/modely-s0129.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0129.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m">$2</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0130.png" data-nav="1" href="/en/skin/modely-s0130/">
-                <img src="/assets/preview/modely-s0130.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0130.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Orange</div>
                 <div class="m">$2</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0131.png" data-nav="1" href="/en/skin/modely-s0131/">
-                <img src="/assets/preview/modely-s0131.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0131.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Gold</div>
                 <div class="m">$1</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0132.png" data-nav="1" href="/en/skin/modely-s0132/">
-                <img src="/assets/preview/modely-s0132.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0132.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Orange</div>
                 <div class="m">$2</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0133.png" data-nav="1" href="/en/skin/modely-s0133/">
-                <img src="/assets/preview/modely-s0133.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0133.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Gold</div>
                 <div class="m">$2</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0134.png" data-nav="1" href="/en/skin/modely-s0134/">
-                <img src="/assets/preview/modely-s0134.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0134.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m">$3</div></div>
             </a>
             <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0135.png" data-nav="1" href="/en/skin/modely-s0135/">
-                <img src="/assets/preview/modely-s0135.webp" alt="Theme Livery" loading="lazy">
+                <img src="/assets/mockups/modely-s0135.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Gray</div>
                 <div class="m">$3</div></div>
             </a></div>
@@ -839,287 +837,7 @@ footer .row{display:flex;gap:18px;flex-wrap:wrap}
 <section><div class="wrap">
     <div class="disc"><b>Disclaimer</b>This is an independent third-party wrap community and is not affiliated with Tesla, Inc. Tesla, Model 3, Model Y and Cybertruck are trademarks of Tesla, Inc., used here for vehicle identification only. All wraps change the on-screen 3D visualisation only and do not affect the physical vehicle.</div>
 </div></section>
-<script type="module">// wrap-viewer.js — 把 Tesla Paint Shop UV-unwrap PNG 真实贴到 3D 车模
-// build.js 把 __REGISTRY__ 替换成各车型 GLB 注册表的 JSON 字符串
-import * as THREE from 'three';
-import { GLTFLoader } from '/assets/vendor/three/jsm/loaders/GLTFLoader.js';
-import { DRACOLoader } from '/assets/vendor/three/jsm/loaders/DRACOLoader.js';
-import { OrbitControls } from '/assets/vendor/three/jsm/controls/OrbitControls.js';
-import { RoomEnvironment } from '/assets/vendor/three/jsm/environments/RoomEnvironment.js';
 
-const REG = {"_comment":"Per-vehicle 3D model registry. GLB + body material name. UV 必须与 Tesla 官方 Paint Shop UV-unwrap 一致，否则贴图会碎片化。missing:true 的车型用 staticImage（整车渲染图 /assets/models/*.png）兜底，绕开 3D。","model3":{"file":"/assets/models3d/model3.glb","bodyMaterial":"body","staticImage":"/assets/models/model3.png","source":"tscherrie/tesla-wrap-viewer","verified":true},"modely":{"missing":true,"staticImage":"/assets/models/modely.png","reason":"未找到 UV 匹配的 Model Y GLB；改用静态整车型参考图"},"modely-2025-base":{"missing":true,"staticImage":"/assets/models/modely-2025-base.png","reason":"未找到 UV 匹配的 2025+ Model Y GLB；改用静态整车型参考图"},"modely-l":{"missing":true,"staticImage":"/assets/models/modely-l.png","reason":"未找到 UV 匹配的 Model Y L (7 座) GLB；改用静态整车型参考图"},"modely-2025-performance":{"missing":true,"staticImage":"/assets/models/modely-2025-performance.png","reason":"未找到匹配的 2025+ Model Y Performance GLB；改用静态整车型参考图"},"model3-2024-base":{"missing":true,"staticImage":"/assets/models/model3-2024-base.png","reason":"未找到 UV 匹配的 Model 3 Highland GLB；改用静态整车型参考图"},"model3-2024-performance":{"missing":true,"staticImage":"/assets/models/model3-2024-performance.png","reason":"未找到匹配的 Model 3 Highland Performance GLB；改用静态整车型参考图"}};
-
-// 不同材质的预设（按 tscherrie/tesla-wrap-viewer 派生：body / 玻璃 / 灯 / 后视镜 / 轮胎）
-const MAT_PRESETS = {
-  tire_mat4:            { color: 0x1a1a1a, metalness: 0, roughness: 0.85 },
-  window:               { color: 0x111111, transparent: true, opacity: 0.4 },
-  windowpng:            { color: 0x111111, transparent: true, opacity: 0.4 },
-  clearglass:           { color: 0x111111, transparent: true, opacity: 0.4 },
-  clearglasssidepillar: { color: 0x111111, transparent: true, opacity: 0.4 },
-  lightled:             { color: 0xffffff, transparent: true, opacity: 0.6, emissive: 0xff6666, emissiveIntensity: 0.4 },
-  rearlightwhite:       { color: 0xffffff, transparent: true, opacity: 0.6, emissive: 0xff4444, emissiveIntensity: 0.5 },
-  rearlight_bright:     { color: 0xffffff, transparent: true, opacity: 0.6, emissive: 0xff4444, emissiveIntensity: 0.5 },
-  chromheadlight:       { color: 0xffffff, transparent: true, opacity: 0.6 },
-  mirror:               { color: 0xeeeeee, metalness: 0.5, roughness: 0.2 },
-};
-
-class WrapViewer {
-  constructor(root) {
-    this.root = root;
-
-    // canvas 容器：viewer3d div 已设宽高，canvas 撑满
-    const cv = document.createElement('canvas');
-    cv.setAttribute('aria-hidden', 'true');
-    root.appendChild(cv);
-    this.canvas = cv;
-
-    this.modelKey = root.dataset.model;
-    this.cfg = REG[this.modelKey];
-    this.bodyMesh = null;
-    this.currentTex = null;
-
-    // 场景/相机/渲染器/控制
-    this.scene = new THREE.Scene();
-    this.camera = new THREE.PerspectiveCamera(35, 1, 0.1, 1000);
-    this.renderer = new THREE.WebGLRenderer({ canvas: cv, antialias: true, alpha: true });
-    this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-    this.renderer.outputColorSpace = THREE.SRGBColorSpace;
-
-    this.controls = new OrbitControls(this.camera, cv);
-    this.controls.enableDamping = true;
-    this.controls.dampingFactor = 0.08;
-    this.controls.enablePan = false;
-    this.controls.autoRotate = root.dataset.autoRotate === '1';
-    this.controls.autoRotateSpeed = 1.0;
-    // min/maxDistance 由 fit() 按模型实际包围盒动态设置（硬编码会把相机卡进车内）
-
-    // 环境贴图：RoomEnvironment 提供中性反射，让金属车漆亮起来（否则金属面反射纯黑）
-    try {
-      const pmrem = new THREE.PMREMGenerator(this.renderer);
-      this.scene.environment = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
-    } catch (e) {
-      console.warn('[wrap-viewer] env map failed', e);
-    }
-
-    // 三点打灯（无 HDR 环境图也能看清颜色）
-    this.scene.add(new THREE.AmbientLight(0xffffff, 0.55));
-    const dl = new THREE.DirectionalLight(0xffffff, 0.85);
-    dl.position.set(3, 5, 4);
-    this.scene.add(dl);
-    const dl2 = new THREE.DirectionalLight(0xffffff, 0.45);
-    dl2.position.set(-3, 3, -2);
-    this.scene.add(dl2);
-
-    this.setTip(root.dataset.statusInit || '加载 3D 模型中…');
-
-    // 注册表缺该车型 → fallback
-    if (!this.cfg || this.cfg.missing) {
-      this.fallback();
-      return;
-    }
-
-    const loader = new GLTFLoader();
-    // Draco 压缩模型解码（model3.glb 已用 gltf-transform draco 压缩，23.7MB→1.6MB）
-    const draco = new DRACOLoader();
-    draco.setDecoderPath('/assets/vendor/three/jsm/libs/draco/gltf/');
-    loader.setDRACOLoader(draco);
-    loader.load(this.cfg.file, (gltf) => {
-      this.scene.add(gltf.scene);
-      gltf.scene.traverse((ch) => {
-        if (!ch.material) return;
-        const n = (ch.material.name || '').toLowerCase();
-        if (n === (this.cfg.bodyMaterial || 'body').toLowerCase()) {
-          // 车身：保留为可贴图状态
-          this.bodyMesh = ch;
-          ch.material = new THREE.MeshPhysicalMaterial({
-            color: 0xffffff, metalness: 0.12, roughness: 0.4,
-            clearcoat: 0.25, clearcoatRoughness: 0.2, side: THREE.DoubleSide,
-          });
-        } else if (MAT_PRESETS[n]) {
-          // 玻璃 / 灯 / 镜 / 轮胎：硬编码预设
-          ch.material = new THREE.MeshPhysicalMaterial(MAT_PRESETS[n]);
-        }
-      });
-      this.fit();
-      this.resize();
-      this.ro = new ResizeObserver(() => this.resize());
-      this.ro.observe(root);
-      this._animate = this._animate.bind(this);
-      this._animate();
-      root._viewerReady = true;
-      const def = root.dataset.defaultSkinUrl;
-      if (def) this.apply(def);
-      else this.setTip(root.dataset.statusApplied || '已就绪');
-    }, undefined, (err) => {
-      console.error('[wrap-viewer] GLB load error', err);
-      this.setTip(root.dataset.statusError || '3D 模型加载失败');
-      this.fallback();
-    });
-  }
-
-  // 包围盒自适应相机
-  fit() {
-    const box = new THREE.Box3().setFromObject(this.scene);
-    if (box.isEmpty()) return;
-    const size = box.getSize(new THREE.Vector3()).length();
-    const center = box.getCenter(new THREE.Vector3());
-    this.controls.target.copy(center);
-    const fov = this.camera.fov * Math.PI / 180;
-    const dist = (size / (2 * Math.tan(fov / 2))) * 1.12;
-    const off = new THREE.Vector3(0.6, 0.32, 1).normalize().multiplyScalar(dist);
-    this.camera.position.copy(center.clone().add(off));
-    this.camera.near = Math.max(0.05, dist / 100);
-    this.camera.far = dist * 50;
-    this.camera.updateProjectionMatrix();
-    // 动态缩放范围：让初始位置落在可达区间里，允许用户放大/缩小
-    this.controls.minDistance = dist * 0.35;
-    this.controls.maxDistance = dist * 6;
-    this.controls.update();
-  }
-
-  resize() {
-    const r = this.root.getBoundingClientRect();
-    const w = Math.max(2, Math.floor(r.width));
-    const h = Math.max(2, Math.floor(r.height));
-    if (this.canvas.width !== w || this.canvas.height !== h) {
-      this.renderer.setSize(w, h, false);
-      this.camera.aspect = w / h;
-      this.camera.updateProjectionMatrix();
-    }
-  }
-
-  // 换肤：UV-unwrap PNG → 车身 baseColorTexture
-  apply(url) {
-    if (!this.bodyMesh || !url) return;
-    if (this.currentTex) { try { this.currentTex.dispose(); } catch (e) {} }
-    const tex = new THREE.TextureLoader().load(url, () => {
-      this.setTip(this.root.dataset.statusApplied || '已贴上该皮肤图案');
-    }, undefined, (err) => {
-      console.error('[wrap-viewer] texture error', err);
-      this.setTip(this.root.dataset.statusError || '贴图加载失败');
-    });
-    tex.colorSpace = THREE.SRGBColorSpace;
-    tex.flipY = false; // 与 Blender 默认 UV 出口一致
-    tex.anisotropy = this.renderer.capabilities.getMaxAnisotropy();
-    tex.needsUpdate = true;
-    this.currentTex = tex;
-    this.bodyMesh.material.map = tex;
-    this.bodyMesh.material.color.set(0xffffff);
-    this.bodyMesh.material.needsUpdate = true;
-  }
-
-  setTip(text) {
-    const tip = this.root.querySelector('.viewer-tip');
-    if (tip) tip.textContent = text;
-  }
-
-  // 车型暂未找到匹配的 GLB → fallback：静态整车图
-  // 注册表里为每个车型配了 staticImage（/assets/models/*.png 整车渲染图）。
-  // 详情页还会叠一张当前皮肤的缩略角标，让用户看得到"车+这套涂装"。
-  fallback() {
-    this.root.classList.add('viewer-static');
-    this.setTip(this.root.dataset.statusFallback || '3D 预览开发中');
-    if (this.canvas) this.canvas.style.display = 'none';
-    // 隐藏对静态图无意义的换肤/还原按钮
-    const applyBtn = this.root.querySelector('[apply-tex]');
-    const resetBtn = this.root.querySelector('[reset-tex]');
-    if (applyBtn) applyBtn.style.display = 'none';
-    if (resetBtn) resetBtn.style.display = 'none';
-
-    const imgUrl = this.cfg && this.cfg.staticImage;
-    if (imgUrl) {
-      const img = document.createElement('img');
-      img.src = imgUrl;
-      img.alt = this.modelKey || 'vehicle';
-      img.loading = 'lazy';
-      img.className = 'viewer-static-img';
-      const tip = this.root.querySelector('.viewer-tip');
-      if (tip) this.root.insertBefore(img, tip);
-      else this.root.appendChild(img);
-    }
-
-    // 详情页：右上角叠加当前皮肤缩略图
-    const thumb = this.root.dataset.skinThumb;
-    if (thumb) {
-      const b = document.createElement('div');
-      b.className = 'viewer-static-badge';
-      b.innerHTML = '<img src="' + thumb + '" alt="' + (this.modelKey || 'skin') + '" />'
-        + '<span>' + (this.root.dataset.skinName || '') + '</span>';
-      const tip = this.root.querySelector('.viewer-tip');
-      if (tip) this.root.insertBefore(b, tip);
-      else this.root.appendChild(b);
-    }
-  }
-
-  _animate() {
-    requestAnimationFrame(this._animate);
-    if (!this.renderer) return;
-    this.controls.update();
-    this.renderer.render(this.scene, this.camera);
-  }
-}
-
-function bootViewers() {
-  document.querySelectorAll('.viewer3d').forEach((r) => {
-    if (r._viewer) return;
-    r._viewer = new WrapViewer(r);
-  });
-}
-
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', bootViewers);
-} else {
-  bootViewers();
-}
-
-// 卡片换肤：data-viewer + data-skin-url
-document.addEventListener('click', (e) => {
-  const card = e.target.closest('[data-viewer][data-skin-url]');
-  if (!card) return;
-  // <a> 卡片允许默认跳转
-  if (card.tagName === 'A' && card.dataset.nav !== '1') return;
-  const id = card.dataset.viewer;
-  const url = card.dataset.skinUrl;
-  const root = document.getElementById(id);
-  if (!root || !root._viewer) return;
-  if (root._viewerReady) {
-    root._viewer.apply(url);
-    document.querySelectorAll('[data-viewer="' + id + '"]').forEach((c) => c.classList.remove('active'));
-    card.classList.add('active');
-  }
-  // 详情页 / 车型页 related（不是 <a>，是 <div>）：阻止默认以防外层链接冒泡
-  e.preventDefault();
-});
-
-// [apply-tex] 按钮：轮换 data-related 里的下一张
-document.addEventListener('click', (e) => {
-  const btn = e.target.closest('[apply-tex]');
-  if (!btn) return;
-  const root = btn.closest('.viewer3d');
-  if (!root || !root._viewer) return;
-  const list = JSON.parse(root.dataset.related || '[]');
-  if (!list.length) return;
-  const cur = root.dataset.skinUrl || root.dataset.defaultSkinUrl;
-  const idx = list.findIndex((r) => r.url === cur);
-  const next = list[(idx + 1 + list.length) % list.length];
-  root.dataset.skinUrl = next.url;
-  root._viewer.apply(next.url);
-  if (next.file) {
-    const tip = root.querySelector('.viewer-tip');
-    if (tip) tip.textContent = next.file;
-  }
-});
-
-// [reset-tex] 按钮：还原为出厂（应用 init skin）
-document.addEventListener('click', (e) => {
-  const btn = e.target.closest('[reset-tex]');
-  if (!btn) return;
-  const root = btn.closest('.viewer3d');
-  if (!root || !root._viewer) return;
-  const init = root.dataset.initSkinUrl || root.dataset.defaultSkinUrl;
-  if (init) root._viewer.apply(init);
-});
-</script>
 <footer><div class="wrap">
     <div class="row">
         <span>© 2026 WrapKit</span>

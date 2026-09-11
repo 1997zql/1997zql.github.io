@@ -64,6 +64,10 @@ background:#eef7ee;color:#2f6b2f;margin-left:6px}
 .viewer3d:active{cursor:grabbing}
 .viewer3d canvas{display:block;width:100%;height:100%}
 .viewer-fallback{background:#f5f5f5;display:flex;align-items:center;justify-content:center;color:#888}
+/* 无 GLB 车型的静态样机大图（车机屏幕边框 + 皮肤图案） */
+.viewer-static{background:radial-gradient(circle at center,#fafafa 0%,#eaeaea 100%);border-radius:12px;margin-bottom:8px;overflow:hidden;padding:22px}
+.viewer-static img{width:100%;display:block;border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,.18)}
+.viewer-static-cap{margin-top:10px;text-align:center;font-size:12px;color:#999}
 /* 无 GLB 的车型：静态车型图 + 短提示 */
 .viewer3d.viewer-static{height:auto;min-height:380px;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:default;background:linear-gradient(180deg,#fafafa 0%,#efefef 100%);padding:18px}
 .viewer3d.viewer-static canvas{display:none}
@@ -128,7 +132,7 @@ footer .row{display:flex;gap:18px;flex-wrap:wrap}
         <a href="/zh/">首页</a>
         <a href="/zh/#models">选择车型</a>
         <a href="/zh/#howto">安装教程</a>
-        <a href="/zh/account/">我的账户</a>
+        
         <a class="lang" href="/en/skin/model3-s0055/">English</a>
     </nav>
 </div></div></header>
@@ -154,11 +158,7 @@ footer .row{display:flex;gap:18px;flex-wrap:wrap}
             <button class="viewer-reset" reset-tex>还原</button>
         </div>
     </div>
-    </div>
     <div class="info">
-        <h1>Model 3 主题涂装青 车机皮肤 PNG 下载 · 虚拟涂装</h1>
-        <p class="sub">主题涂装风格遇上青基调，给Model 3的车机界面换一套不撞车的视觉。 同一账号下可反复切换，导入过程不需要联网，车机重启后依然保留。 适合不喜欢原厂那几套默认配色的人。 不同年份车款的 UV 展开存在差异，请按页面标注的车型下载。</p>
-        <div class="specs">
         <h1>Model 3 主题涂装青 车机皮肤 PNG 下载 · 虚拟涂装</h1>
         <p class="sub">主题涂装风格遇上青基调，给Model 3的车机界面换一套不撞车的视觉。 同一账号下可反复切换，导入过程不需要联网，车机重启后依然保留。 适合不喜欢原厂那几套默认配色的人。 不同年份车款的 UV 展开存在差异，请按页面标注的车型下载。</p>
         <div class="specs">
@@ -488,19 +488,16 @@ if (document.readyState === 'loading') {
 document.addEventListener('click', (e) => {
   const card = e.target.closest('[data-viewer][data-skin-url]');
   if (!card) return;
-  // <a> 卡片允许默认跳转
-  if (card.tagName === 'A' && card.dataset.nav !== '1') return;
+  // 列表卡（data-nav="1"，车型页网格/首页精选）：一律放行默认跳转进详情页
+  // 就地换肤只发生在详情页 related 卡上，未 ready 时静默（div 本无默认行为）
+  if (card.dataset.nav === '1') return;
   const id = card.dataset.viewer;
   const url = card.dataset.skinUrl;
   const root = document.getElementById(id);
-  if (!root || !root._viewer) return;
-  if (root._viewerReady) {
-    root._viewer.apply(url);
-    document.querySelectorAll('[data-viewer="' + id + '"]').forEach((c) => c.classList.remove('active'));
-    card.classList.add('active');
-  }
-  // 详情页 / 车型页 related（不是 <a>，是 <div>）：阻止默认以防外层链接冒泡
-  e.preventDefault();
+  if (!root || !root._viewer || !root._viewerReady) return;
+  root._viewer.apply(url);
+  document.querySelectorAll('[data-viewer="' + id + '"]').forEach((c) => c.classList.remove('active'));
+  card.classList.add('active');
 });
 
 // [apply-tex] 按钮：轮换 data-related 里的下一张
