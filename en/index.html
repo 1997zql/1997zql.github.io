@@ -68,6 +68,15 @@ background:#eef7ee;color:#2f6b2f;margin-left:6px}
 .viewer-static{background:radial-gradient(circle at center,#fafafa 0%,#eaeaea 100%);border-radius:12px;margin-bottom:8px;overflow:hidden;padding:22px}
 .viewer-static img{width:100%;display:block;border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,.18)}
 .viewer-static-cap{margin-top:10px;text-align:center;font-size:12px;color:#999}
+/* 面包屑 / 车型页筛选条 / 查看全部 */
+.crumbs{font-size:13px;color:#999;margin-bottom:16px}
+.crumbs a{color:#777}
+.crumbs a:hover{color:#1a1a1a}
+.crumbs .cur{color:#1a1a1a}
+.filter{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 18px}
+.filter button{border:1px solid #e5e5e5;background:#fff;border-radius:999px;padding:6px 14px;font-size:13px;color:#555;cursor:pointer}
+.filter button.active{background:#1a1a1a;color:#fff;border-color:#1a1a1a}
+.seeall{display:inline-block;margin-top:16px;font-size:14px;color:#1a1a1a;border-bottom:1px solid #1a1a1a;padding-bottom:2px}
 /* 无 GLB 的车型：静态车型图 + 短提示 */
 .viewer3d.viewer-static{height:auto;min-height:380px;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:default;background:linear-gradient(180deg,#fafafa 0%,#efefef 100%);padding:18px}
 .viewer3d.viewer-static canvas{display:none}
@@ -130,6 +139,7 @@ footer .row{display:flex;gap:18px;flex-wrap:wrap}
     <a class="logo" href="/en/">WrapKit<span>Paint Shop wrap PNG downloads</span></a>
     <nav>
         <a href="/en/">Home</a>
+        <a href="/en/free/">Free wraps</a>
         <a href="/en/#models">Vehicles</a>
         <a href="/en/#howto">How to install</a>
         
@@ -153,17 +163,17 @@ footer .row{display:flex;gap:18px;flex-wrap:wrap}
         <p>A virtual wrap only changes the 3D vehicle model on your touchscreen. Your real paint stays untouched.</p>
         <a class="cta" href="#models">Pick my vehicle</a>
         <div class="picks">
-            <a class="card active" data-viewer="viewer-home" data-skin-url="/assets/download/model3-s0001.png" data-nav="1" href="/en/skin/model3-s0001/">
+            <a class="card" data-nav="1" href="/en/skin/model3-s0001/">
                 <img src="/assets/renders/model3-s0001.png" alt="Theme Livery · White" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · White</div>
                 <div class="m">Model 3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-home" data-skin-url="/assets/download/model3-s0002.png" data-nav="1" href="/en/skin/model3-s0002/">
+            <a class="card" data-nav="1" href="/en/skin/model3-s0002/">
                 <img src="/assets/renders/model3-s0002.png" alt="Theme Livery · White" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · White</div>
                 <div class="m">Model 3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-home" data-skin-url="/assets/download/model3-s0003.png" data-nav="1" href="/en/skin/model3-s0003/">
+            <a class="card" data-nav="1" href="/en/skin/model3-s0003/">
                 <img src="/assets/renders/model3-s0003.png" alt="Theme Livery · Blue" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Blue</div>
                 <div class="m">Model 3</div></div>
@@ -284,6 +294,7 @@ footer .row{display:flex;gap:18px;flex-wrap:wrap}
         <div class="m">Model 3 Highland</div>
     </div>
 </a></div>
+    <a class="seeall" href="/en/free/">See all free skins →</a>
 </section>
 <section id="all">
     <h2>All wraps</h2>

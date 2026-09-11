@@ -68,6 +68,15 @@ background:#eef7ee;color:#2f6b2f;margin-left:6px}
 .viewer-static{background:radial-gradient(circle at center,#fafafa 0%,#eaeaea 100%);border-radius:12px;margin-bottom:8px;overflow:hidden;padding:22px}
 .viewer-static img{width:100%;display:block;border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,.18)}
 .viewer-static-cap{margin-top:10px;text-align:center;font-size:12px;color:#999}
+/* 面包屑 / 车型页筛选条 / 查看全部 */
+.crumbs{font-size:13px;color:#999;margin-bottom:16px}
+.crumbs a{color:#777}
+.crumbs a:hover{color:#1a1a1a}
+.crumbs .cur{color:#1a1a1a}
+.filter{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 18px}
+.filter button{border:1px solid #e5e5e5;background:#fff;border-radius:999px;padding:6px 14px;font-size:13px;color:#555;cursor:pointer}
+.filter button.active{background:#1a1a1a;color:#fff;border-color:#1a1a1a}
+.seeall{display:inline-block;margin-top:16px;font-size:14px;color:#1a1a1a;border-bottom:1px solid #1a1a1a;padding-bottom:2px}
 /* 无 GLB 的车型：静态车型图 + 短提示 */
 .viewer3d.viewer-static{height:auto;min-height:380px;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:default;background:linear-gradient(180deg,#fafafa 0%,#efefef 100%);padding:18px}
 .viewer3d.viewer-static canvas{display:none}
@@ -130,6 +139,7 @@ footer .row{display:flex;gap:18px;flex-wrap:wrap}
     <a class="logo" href="/zh/">车衣实验室<span>车机虚拟涂装 PNG 下载</span></a>
     <nav>
         <a href="/zh/">首页</a>
+        <a href="/zh/free/">免费下载</a>
         <a href="/zh/#models">选择车型</a>
         <a href="/zh/#howto">安装教程</a>
         
@@ -137,7 +147,9 @@ footer .row{display:flex;gap:18px;flex-wrap:wrap}
     </nav>
 </div></div></header>
 
-<div class="wrap"><div class="model-browser">
+<div class="wrap">
+    <nav class="crumbs"><a href="/zh/">首页</a> › <span class="cur">Model Y</span></nav>
+    <div class="model-browser">
     <div>
         <div class="viewer-static">
             <img src="/assets/mockups/modely-s0001.webp" alt="Model Y">
@@ -147,684 +159,709 @@ footer .row{display:flex;gap:18px;flex-wrap:wrap}
     <div>
         <h1>Model Y</h1>
         <p class="sub">135 款涂装 · 为 Model Y 准备的 135 款车机虚拟涂装，覆盖多种风格与配色。全部符合 Tesla Paint Shop 规格，下载即可导入。</p>
+        <div class="filter">
+            <button class="active" data-filter="all">全部</button>
+            <button data-filter="free">免费款</button>
+            <button data-filter="1">$1</button>
+            <button data-filter="2">$2</button>
+            <button data-filter="3">$3</button>
+        </div>
         <div class="picks">
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0001.png" data-nav="1" href="/zh/skin/modely-s0001/">
+            <a class="card" data-price="0" href="/zh/skin/modely-s0001/">
                 <img src="/assets/mockups/modely-s0001.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 蓝</div>
                 <div class="m"><span class="badge">免费下载</span></div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0002.png" data-nav="1" href="/zh/skin/modely-s0002/">
+            <a class="card" data-price="0" href="/zh/skin/modely-s0002/">
                 <img src="/assets/mockups/modely-s0002.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 白</div>
                 <div class="m"><span class="badge">免费下载</span></div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0003.png" data-nav="1" href="/zh/skin/modely-s0003/">
+            <a class="card" data-price="0" href="/zh/skin/modely-s0003/">
                 <img src="/assets/mockups/modely-s0003.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 蓝</div>
                 <div class="m"><span class="badge">免费下载</span></div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0004.png" data-nav="1" href="/zh/skin/modely-s0004/">
+            <a class="card" data-price="1" href="/zh/skin/modely-s0004/">
                 <img src="/assets/mockups/modely-s0004.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 橙</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0005.png" data-nav="1" href="/zh/skin/modely-s0005/">
+            <a class="card" data-price="2" href="/zh/skin/modely-s0005/">
                 <img src="/assets/mockups/modely-s0005.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 红</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0006.png" data-nav="1" href="/zh/skin/modely-s0006/">
+            <a class="card" data-price="1" href="/zh/skin/modely-s0006/">
                 <img src="/assets/mockups/modely-s0006.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 红</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0007.png" data-nav="1" href="/zh/skin/modely-s0007/">
+            <a class="card" data-price="1" href="/zh/skin/modely-s0007/">
                 <img src="/assets/mockups/modely-s0007.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 橙</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0008.png" data-nav="1" href="/zh/skin/modely-s0008/">
+            <a class="card" data-price="2" href="/zh/skin/modely-s0008/">
                 <img src="/assets/mockups/modely-s0008.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 灰</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0009.png" data-nav="1" href="/zh/skin/modely-s0009/">
+            <a class="card" data-price="3" href="/zh/skin/modely-s0009/">
                 <img src="/assets/mockups/modely-s0009.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 橙</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0010.png" data-nav="1" href="/zh/skin/modely-s0010/">
+            <a class="card" data-price="3" href="/zh/skin/modely-s0010/">
                 <img src="/assets/mockups/modely-s0010.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 蓝</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0011.png" data-nav="1" href="/zh/skin/modely-s0011/">
+            <a class="card" data-price="3" href="/zh/skin/modely-s0011/">
                 <img src="/assets/mockups/modely-s0011.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 橙</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0012.png" data-nav="1" href="/zh/skin/modely-s0012/">
+            <a class="card" data-price="2" href="/zh/skin/modely-s0012/">
                 <img src="/assets/mockups/modely-s0012.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 红</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0013.png" data-nav="1" href="/zh/skin/modely-s0013/">
+            <a class="card" data-price="1" href="/zh/skin/modely-s0013/">
                 <img src="/assets/mockups/modely-s0013.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 红</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0014.png" data-nav="1" href="/zh/skin/modely-s0014/">
+            <a class="card" data-price="2" href="/zh/skin/modely-s0014/">
                 <img src="/assets/mockups/modely-s0014.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 红</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0015.png" data-nav="1" href="/zh/skin/modely-s0015/">
+            <a class="card" data-price="1" href="/zh/skin/modely-s0015/">
                 <img src="/assets/mockups/modely-s0015.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 绿</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0016.png" data-nav="1" href="/zh/skin/modely-s0016/">
+            <a class="card" data-price="2" href="/zh/skin/modely-s0016/">
                 <img src="/assets/mockups/modely-s0016.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 蓝</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0017.png" data-nav="1" href="/zh/skin/modely-s0017/">
+            <a class="card" data-price="2" href="/zh/skin/modely-s0017/">
                 <img src="/assets/mockups/modely-s0017.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 青</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0018.png" data-nav="1" href="/zh/skin/modely-s0018/">
+            <a class="card" data-price="0" href="/zh/skin/modely-s0018/">
                 <img src="/assets/mockups/modely-s0018.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 绿</div>
                 <div class="m"><span class="badge">免费下载</span></div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0019.png" data-nav="1" href="/zh/skin/modely-s0019/">
+            <a class="card" data-price="2" href="/zh/skin/modely-s0019/">
                 <img src="/assets/mockups/modely-s0019.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 红</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0020.png" data-nav="1" href="/zh/skin/modely-s0020/">
+            <a class="card" data-price="2" href="/zh/skin/modely-s0020/">
                 <img src="/assets/mockups/modely-s0020.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 红</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0021.png" data-nav="1" href="/zh/skin/modely-s0021/">
+            <a class="card" data-price="2" href="/zh/skin/modely-s0021/">
                 <img src="/assets/mockups/modely-s0021.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 橙</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0022.png" data-nav="1" href="/zh/skin/modely-s0022/">
+            <a class="card" data-price="2" href="/zh/skin/modely-s0022/">
                 <img src="/assets/mockups/modely-s0022.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 红</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0023.png" data-nav="1" href="/zh/skin/modely-s0023/">
+            <a class="card" data-price="1" href="/zh/skin/modely-s0023/">
                 <img src="/assets/mockups/modely-s0023.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 蓝</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0024.png" data-nav="1" href="/zh/skin/modely-s0024/">
+            <a class="card" data-price="2" href="/zh/skin/modely-s0024/">
                 <img src="/assets/mockups/modely-s0024.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 红</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0025.png" data-nav="1" href="/zh/skin/modely-s0025/">
+            <a class="card" data-price="2" href="/zh/skin/modely-s0025/">
                 <img src="/assets/mockups/modely-s0025.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 蓝</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0026.png" data-nav="1" href="/zh/skin/modely-s0026/">
+            <a class="card" data-price="2" href="/zh/skin/modely-s0026/">
                 <img src="/assets/mockups/modely-s0026.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 红</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0027.png" data-nav="1" href="/zh/skin/modely-s0027/">
+            <a class="card" data-price="3" href="/zh/skin/modely-s0027/">
                 <img src="/assets/mockups/modely-s0027.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 白</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0028.png" data-nav="1" href="/zh/skin/modely-s0028/">
+            <a class="card" data-price="1" href="/zh/skin/modely-s0028/">
                 <img src="/assets/mockups/modely-s0028.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 绿</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0029.png" data-nav="1" href="/zh/skin/modely-s0029/">
+            <a class="card" data-price="1" href="/zh/skin/modely-s0029/">
                 <img src="/assets/mockups/modely-s0029.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 黑</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0030.png" data-nav="1" href="/zh/skin/modely-s0030/">
+            <a class="card" data-price="3" href="/zh/skin/modely-s0030/">
                 <img src="/assets/mockups/modely-s0030.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 蓝</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0031.png" data-nav="1" href="/zh/skin/modely-s0031/">
+            <a class="card" data-price="2" href="/zh/skin/modely-s0031/">
                 <img src="/assets/mockups/modely-s0031.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 蓝</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0032.png" data-nav="1" href="/zh/skin/modely-s0032/">
+            <a class="card" data-price="2" href="/zh/skin/modely-s0032/">
                 <img src="/assets/mockups/modely-s0032.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 蓝</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0033.png" data-nav="1" href="/zh/skin/modely-s0033/">
+            <a class="card" data-price="0" href="/zh/skin/modely-s0033/">
                 <img src="/assets/mockups/modely-s0033.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 红</div>
                 <div class="m"><span class="badge">免费下载</span></div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0034.png" data-nav="1" href="/zh/skin/modely-s0034/">
+            <a class="card" data-price="2" href="/zh/skin/modely-s0034/">
                 <img src="/assets/mockups/modely-s0034.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 青</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0035.png" data-nav="1" href="/zh/skin/modely-s0035/">
+            <a class="card" data-price="2" href="/zh/skin/modely-s0035/">
                 <img src="/assets/mockups/modely-s0035.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 蓝</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0036.png" data-nav="1" href="/zh/skin/modely-s0036/">
+            <a class="card" data-price="2" href="/zh/skin/modely-s0036/">
                 <img src="/assets/mockups/modely-s0036.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 蓝</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0037.png" data-nav="1" href="/zh/skin/modely-s0037/">
+            <a class="card" data-price="3" href="/zh/skin/modely-s0037/">
                 <img src="/assets/mockups/modely-s0037.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 青</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0038.png" data-nav="1" href="/zh/skin/modely-s0038/">
+            <a class="card" data-price="2" href="/zh/skin/modely-s0038/">
                 <img src="/assets/mockups/modely-s0038.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 白</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0039.png" data-nav="1" href="/zh/skin/modely-s0039/">
+            <a class="card" data-price="2" href="/zh/skin/modely-s0039/">
                 <img src="/assets/mockups/modely-s0039.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 白</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0040.png" data-nav="1" href="/zh/skin/modely-s0040/">
+            <a class="card" data-price="2" href="/zh/skin/modely-s0040/">
                 <img src="/assets/mockups/modely-s0040.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 粉</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0041.png" data-nav="1" href="/zh/skin/modely-s0041/">
+            <a class="card" data-price="1" href="/zh/skin/modely-s0041/">
                 <img src="/assets/mockups/modely-s0041.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 蓝</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0042.png" data-nav="1" href="/zh/skin/modely-s0042/">
+            <a class="card" data-price="2" href="/zh/skin/modely-s0042/">
                 <img src="/assets/mockups/modely-s0042.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 蓝</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0043.png" data-nav="1" href="/zh/skin/modely-s0043/">
+            <a class="card" data-price="2" href="/zh/skin/modely-s0043/">
                 <img src="/assets/mockups/modely-s0043.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 红</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0044.png" data-nav="1" href="/zh/skin/modely-s0044/">
+            <a class="card" data-price="1" href="/zh/skin/modely-s0044/">
                 <img src="/assets/mockups/modely-s0044.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 白</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0045.png" data-nav="1" href="/zh/skin/modely-s0045/">
+            <a class="card" data-price="2" href="/zh/skin/modely-s0045/">
                 <img src="/assets/mockups/modely-s0045.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 红</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0046.png" data-nav="1" href="/zh/skin/modely-s0046/">
+            <a class="card" data-price="2" href="/zh/skin/modely-s0046/">
                 <img src="/assets/mockups/modely-s0046.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 白</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0047.png" data-nav="1" href="/zh/skin/modely-s0047/">
+            <a class="card" data-price="3" href="/zh/skin/modely-s0047/">
                 <img src="/assets/mockups/modely-s0047.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 红</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0048.png" data-nav="1" href="/zh/skin/modely-s0048/">
+            <a class="card" data-price="0" href="/zh/skin/modely-s0048/">
                 <img src="/assets/mockups/modely-s0048.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 橙</div>
                 <div class="m"><span class="badge">免费下载</span></div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0049.png" data-nav="1" href="/zh/skin/modely-s0049/">
+            <a class="card" data-price="1" href="/zh/skin/modely-s0049/">
                 <img src="/assets/mockups/modely-s0049.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 白</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0050.png" data-nav="1" href="/zh/skin/modely-s0050/">
+            <a class="card" data-price="2" href="/zh/skin/modely-s0050/">
                 <img src="/assets/mockups/modely-s0050.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 黑</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0051.png" data-nav="1" href="/zh/skin/modely-s0051/">
+            <a class="card" data-price="3" href="/zh/skin/modely-s0051/">
                 <img src="/assets/mockups/modely-s0051.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 黑</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0052.png" data-nav="1" href="/zh/skin/modely-s0052/">
+            <a class="card" data-price="3" href="/zh/skin/modely-s0052/">
                 <img src="/assets/mockups/modely-s0052.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 白</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0053.png" data-nav="1" href="/zh/skin/modely-s0053/">
+            <a class="card" data-price="3" href="/zh/skin/modely-s0053/">
                 <img src="/assets/mockups/modely-s0053.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 红</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0054.png" data-nav="1" href="/zh/skin/modely-s0054/">
+            <a class="card" data-price="2" href="/zh/skin/modely-s0054/">
                 <img src="/assets/mockups/modely-s0054.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 粉</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0055.png" data-nav="1" href="/zh/skin/modely-s0055/">
+            <a class="card" data-price="2" href="/zh/skin/modely-s0055/">
                 <img src="/assets/mockups/modely-s0055.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 橙</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0056.png" data-nav="1" href="/zh/skin/modely-s0056/">
+            <a class="card" data-price="3" href="/zh/skin/modely-s0056/">
                 <img src="/assets/mockups/modely-s0056.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 蓝</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0057.png" data-nav="1" href="/zh/skin/modely-s0057/">
+            <a class="card" data-price="2" href="/zh/skin/modely-s0057/">
                 <img src="/assets/mockups/modely-s0057.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 白</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0058.png" data-nav="1" href="/zh/skin/modely-s0058/">
+            <a class="card" data-price="2" href="/zh/skin/modely-s0058/">
                 <img src="/assets/mockups/modely-s0058.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 红</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0059.png" data-nav="1" href="/zh/skin/modely-s0059/">
+            <a class="card" data-price="2" href="/zh/skin/modely-s0059/">
                 <img src="/assets/mockups/modely-s0059.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 红</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0060.png" data-nav="1" href="/zh/skin/modely-s0060/">
+            <a class="card" data-price="2" href="/zh/skin/modely-s0060/">
                 <img src="/assets/mockups/modely-s0060.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 灰</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0061.png" data-nav="1" href="/zh/skin/modely-s0061/">
+            <a class="card" data-price="2" href="/zh/skin/modely-s0061/">
                 <img src="/assets/mockups/modely-s0061.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 蓝</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0062.png" data-nav="1" href="/zh/skin/modely-s0062/">
+            <a class="card" data-price="2" href="/zh/skin/modely-s0062/">
                 <img src="/assets/mockups/modely-s0062.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 红</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0063.png" data-nav="1" href="/zh/skin/modely-s0063/">
+            <a class="card" data-price="0" href="/zh/skin/modely-s0063/">
                 <img src="/assets/mockups/modely-s0063.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 白</div>
                 <div class="m"><span class="badge">免费下载</span></div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0064.png" data-nav="1" href="/zh/skin/modely-s0064/">
+            <a class="card" data-price="1" href="/zh/skin/modely-s0064/">
                 <img src="/assets/mockups/modely-s0064.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 橙</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0065.png" data-nav="1" href="/zh/skin/modely-s0065/">
+            <a class="card" data-price="2" href="/zh/skin/modely-s0065/">
                 <img src="/assets/mockups/modely-s0065.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 白</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0066.png" data-nav="1" href="/zh/skin/modely-s0066/">
+            <a class="card" data-price="2" href="/zh/skin/modely-s0066/">
                 <img src="/assets/mockups/modely-s0066.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 红</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0067.png" data-nav="1" href="/zh/skin/modely-s0067/">
+            <a class="card" data-price="2" href="/zh/skin/modely-s0067/">
                 <img src="/assets/mockups/modely-s0067.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 红</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0068.png" data-nav="1" href="/zh/skin/modely-s0068/">
+            <a class="card" data-price="3" href="/zh/skin/modely-s0068/">
                 <img src="/assets/mockups/modely-s0068.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 橙</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0069.png" data-nav="1" href="/zh/skin/modely-s0069/">
+            <a class="card" data-price="2" href="/zh/skin/modely-s0069/">
                 <img src="/assets/mockups/modely-s0069.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 红</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0070.png" data-nav="1" href="/zh/skin/modely-s0070/">
+            <a class="card" data-price="3" href="/zh/skin/modely-s0070/">
                 <img src="/assets/mockups/modely-s0070.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 蓝</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0071.png" data-nav="1" href="/zh/skin/modely-s0071/">
+            <a class="card" data-price="2" href="/zh/skin/modely-s0071/">
                 <img src="/assets/mockups/modely-s0071.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 金</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0072.png" data-nav="1" href="/zh/skin/modely-s0072/">
+            <a class="card" data-price="1" href="/zh/skin/modely-s0072/">
                 <img src="/assets/mockups/modely-s0072.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 白</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0073.png" data-nav="1" href="/zh/skin/modely-s0073/">
+            <a class="card" data-price="3" href="/zh/skin/modely-s0073/">
                 <img src="/assets/mockups/modely-s0073.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 青</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0074.png" data-nav="1" href="/zh/skin/modely-s0074/">
+            <a class="card" data-price="1" href="/zh/skin/modely-s0074/">
                 <img src="/assets/mockups/modely-s0074.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 金</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0075.png" data-nav="1" href="/zh/skin/modely-s0075/">
+            <a class="card" data-price="1" href="/zh/skin/modely-s0075/">
                 <img src="/assets/mockups/modely-s0075.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 白</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0076.png" data-nav="1" href="/zh/skin/modely-s0076/">
+            <a class="card" data-price="2" href="/zh/skin/modely-s0076/">
                 <img src="/assets/mockups/modely-s0076.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 橙</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0077.png" data-nav="1" href="/zh/skin/modely-s0077/">
+            <a class="card" data-price="2" href="/zh/skin/modely-s0077/">
                 <img src="/assets/mockups/modely-s0077.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 白</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0078.png" data-nav="1" href="/zh/skin/modely-s0078/">
+            <a class="card" data-price="0" href="/zh/skin/modely-s0078/">
                 <img src="/assets/mockups/modely-s0078.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 红</div>
                 <div class="m"><span class="badge">免费下载</span></div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0079.png" data-nav="1" href="/zh/skin/modely-s0079/">
+            <a class="card" data-price="2" href="/zh/skin/modely-s0079/">
                 <img src="/assets/mockups/modely-s0079.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 红</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0080.png" data-nav="1" href="/zh/skin/modely-s0080/">
+            <a class="card" data-price="3" href="/zh/skin/modely-s0080/">
                 <img src="/assets/mockups/modely-s0080.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 红</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0081.png" data-nav="1" href="/zh/skin/modely-s0081/">
+            <a class="card" data-price="2" href="/zh/skin/modely-s0081/">
                 <img src="/assets/mockups/modely-s0081.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 蓝</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0082.png" data-nav="1" href="/zh/skin/modely-s0082/">
+            <a class="card" data-price="2" href="/zh/skin/modely-s0082/">
                 <img src="/assets/mockups/modely-s0082.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 灰</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0083.png" data-nav="1" href="/zh/skin/modely-s0083/">
+            <a class="card" data-price="3" href="/zh/skin/modely-s0083/">
                 <img src="/assets/mockups/modely-s0083.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 蓝</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0084.png" data-nav="1" href="/zh/skin/modely-s0084/">
+            <a class="card" data-price="3" href="/zh/skin/modely-s0084/">
                 <img src="/assets/mockups/modely-s0084.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 红</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0085.png" data-nav="1" href="/zh/skin/modely-s0085/">
+            <a class="card" data-price="1" href="/zh/skin/modely-s0085/">
                 <img src="/assets/mockups/modely-s0085.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 灰</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0086.png" data-nav="1" href="/zh/skin/modely-s0086/">
+            <a class="card" data-price="2" href="/zh/skin/modely-s0086/">
                 <img src="/assets/mockups/modely-s0086.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 绿</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0087.png" data-nav="1" href="/zh/skin/modely-s0087/">
+            <a class="card" data-price="3" href="/zh/skin/modely-s0087/">
                 <img src="/assets/mockups/modely-s0087.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 蓝</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0088.png" data-nav="1" href="/zh/skin/modely-s0088/">
+            <a class="card" data-price="3" href="/zh/skin/modely-s0088/">
                 <img src="/assets/mockups/modely-s0088.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 蓝</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0089.png" data-nav="1" href="/zh/skin/modely-s0089/">
+            <a class="card" data-price="2" href="/zh/skin/modely-s0089/">
                 <img src="/assets/mockups/modely-s0089.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 红</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0090.png" data-nav="1" href="/zh/skin/modely-s0090/">
+            <a class="card" data-price="2" href="/zh/skin/modely-s0090/">
                 <img src="/assets/mockups/modely-s0090.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 青</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0091.png" data-nav="1" href="/zh/skin/modely-s0091/">
+            <a class="card" data-price="1" href="/zh/skin/modely-s0091/">
                 <img src="/assets/mockups/modely-s0091.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 蓝</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0092.png" data-nav="1" href="/zh/skin/modely-s0092/">
+            <a class="card" data-price="2" href="/zh/skin/modely-s0092/">
                 <img src="/assets/mockups/modely-s0092.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 红</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0093.png" data-nav="1" href="/zh/skin/modely-s0093/">
+            <a class="card" data-price="0" href="/zh/skin/modely-s0093/">
                 <img src="/assets/mockups/modely-s0093.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 蓝</div>
                 <div class="m"><span class="badge">免费下载</span></div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0094.png" data-nav="1" href="/zh/skin/modely-s0094/">
+            <a class="card" data-price="3" href="/zh/skin/modely-s0094/">
                 <img src="/assets/mockups/modely-s0094.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 红</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0095.png" data-nav="1" href="/zh/skin/modely-s0095/">
+            <a class="card" data-price="3" href="/zh/skin/modely-s0095/">
                 <img src="/assets/mockups/modely-s0095.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 红</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0096.png" data-nav="1" href="/zh/skin/modely-s0096/">
+            <a class="card" data-price="3" href="/zh/skin/modely-s0096/">
                 <img src="/assets/mockups/modely-s0096.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 粉</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0097.png" data-nav="1" href="/zh/skin/modely-s0097/">
+            <a class="card" data-price="2" href="/zh/skin/modely-s0097/">
                 <img src="/assets/mockups/modely-s0097.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 粉</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0098.png" data-nav="1" href="/zh/skin/modely-s0098/">
+            <a class="card" data-price="2" href="/zh/skin/modely-s0098/">
                 <img src="/assets/mockups/modely-s0098.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 金</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0099.png" data-nav="1" href="/zh/skin/modely-s0099/">
+            <a class="card" data-price="2" href="/zh/skin/modely-s0099/">
                 <img src="/assets/mockups/modely-s0099.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 红</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0100.png" data-nav="1" href="/zh/skin/modely-s0100/">
+            <a class="card" data-price="1" href="/zh/skin/modely-s0100/">
                 <img src="/assets/mockups/modely-s0100.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 红</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0101.png" data-nav="1" href="/zh/skin/modely-s0101/">
+            <a class="card" data-price="2" href="/zh/skin/modely-s0101/">
                 <img src="/assets/mockups/modely-s0101.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 橙</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0102.png" data-nav="1" href="/zh/skin/modely-s0102/">
+            <a class="card" data-price="2" href="/zh/skin/modely-s0102/">
                 <img src="/assets/mockups/modely-s0102.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 白</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0103.png" data-nav="1" href="/zh/skin/modely-s0103/">
+            <a class="card" data-price="3" href="/zh/skin/modely-s0103/">
                 <img src="/assets/mockups/modely-s0103.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 蓝</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0104.png" data-nav="1" href="/zh/skin/modely-s0104/">
+            <a class="card" data-price="2" href="/zh/skin/modely-s0104/">
                 <img src="/assets/mockups/modely-s0104.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 灰</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0105.png" data-nav="1" href="/zh/skin/modely-s0105/">
+            <a class="card" data-price="2" href="/zh/skin/modely-s0105/">
                 <img src="/assets/mockups/modely-s0105.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 青</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0106.png" data-nav="1" href="/zh/skin/modely-s0106/">
+            <a class="card" data-price="3" href="/zh/skin/modely-s0106/">
                 <img src="/assets/mockups/modely-s0106.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 灰</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0107.png" data-nav="1" href="/zh/skin/modely-s0107/">
+            <a class="card" data-price="3" href="/zh/skin/modely-s0107/">
                 <img src="/assets/mockups/modely-s0107.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 灰</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0108.png" data-nav="1" href="/zh/skin/modely-s0108/">
+            <a class="card" data-price="0" href="/zh/skin/modely-s0108/">
                 <img src="/assets/mockups/modely-s0108.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 蓝</div>
                 <div class="m"><span class="badge">免费下载</span></div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0109.png" data-nav="1" href="/zh/skin/modely-s0109/">
+            <a class="card" data-price="2" href="/zh/skin/modely-s0109/">
                 <img src="/assets/mockups/modely-s0109.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 白</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0110.png" data-nav="1" href="/zh/skin/modely-s0110/">
+            <a class="card" data-price="2" href="/zh/skin/modely-s0110/">
                 <img src="/assets/mockups/modely-s0110.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 金</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0111.png" data-nav="1" href="/zh/skin/modely-s0111/">
+            <a class="card" data-price="1" href="/zh/skin/modely-s0111/">
                 <img src="/assets/mockups/modely-s0111.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 白</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0112.png" data-nav="1" href="/zh/skin/modely-s0112/">
+            <a class="card" data-price="3" href="/zh/skin/modely-s0112/">
                 <img src="/assets/mockups/modely-s0112.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 灰</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0113.png" data-nav="1" href="/zh/skin/modely-s0113/">
+            <a class="card" data-price="1" href="/zh/skin/modely-s0113/">
                 <img src="/assets/mockups/modely-s0113.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 蓝</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0114.png" data-nav="1" href="/zh/skin/modely-s0114/">
+            <a class="card" data-price="3" href="/zh/skin/modely-s0114/">
                 <img src="/assets/mockups/modely-s0114.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 白</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0115.png" data-nav="1" href="/zh/skin/modely-s0115/">
+            <a class="card" data-price="3" href="/zh/skin/modely-s0115/">
                 <img src="/assets/mockups/modely-s0115.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 红</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0116.png" data-nav="1" href="/zh/skin/modely-s0116/">
+            <a class="card" data-price="1" href="/zh/skin/modely-s0116/">
                 <img src="/assets/mockups/modely-s0116.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 橙</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0117.png" data-nav="1" href="/zh/skin/modely-s0117/">
+            <a class="card" data-price="1" href="/zh/skin/modely-s0117/">
                 <img src="/assets/mockups/modely-s0117.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 白</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0118.png" data-nav="1" href="/zh/skin/modely-s0118/">
+            <a class="card" data-price="3" href="/zh/skin/modely-s0118/">
                 <img src="/assets/mockups/modely-s0118.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 红</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0119.png" data-nav="1" href="/zh/skin/modely-s0119/">
+            <a class="card" data-price="3" href="/zh/skin/modely-s0119/">
                 <img src="/assets/mockups/modely-s0119.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 紫</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0120.png" data-nav="1" href="/zh/skin/modely-s0120/">
+            <a class="card" data-price="1" href="/zh/skin/modely-s0120/">
                 <img src="/assets/mockups/modely-s0120.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 蓝</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0121.png" data-nav="1" href="/zh/skin/modely-s0121/">
+            <a class="card" data-price="3" href="/zh/skin/modely-s0121/">
                 <img src="/assets/mockups/modely-s0121.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 紫</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0122.png" data-nav="1" href="/zh/skin/modely-s0122/">
+            <a class="card" data-price="2" href="/zh/skin/modely-s0122/">
                 <img src="/assets/mockups/modely-s0122.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 红</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0123.png" data-nav="1" href="/zh/skin/modely-s0123/">
+            <a class="card" data-price="0" href="/zh/skin/modely-s0123/">
                 <img src="/assets/mockups/modely-s0123.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 白</div>
                 <div class="m"><span class="badge">免费下载</span></div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0124.png" data-nav="1" href="/zh/skin/modely-s0124/">
+            <a class="card" data-price="2" href="/zh/skin/modely-s0124/">
                 <img src="/assets/mockups/modely-s0124.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 橙</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0125.png" data-nav="1" href="/zh/skin/modely-s0125/">
+            <a class="card" data-price="3" href="/zh/skin/modely-s0125/">
                 <img src="/assets/mockups/modely-s0125.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 红</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0126.png" data-nav="1" href="/zh/skin/modely-s0126/">
+            <a class="card" data-price="3" href="/zh/skin/modely-s0126/">
                 <img src="/assets/mockups/modely-s0126.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 橙</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0127.png" data-nav="1" href="/zh/skin/modely-s0127/">
+            <a class="card" data-price="2" href="/zh/skin/modely-s0127/">
                 <img src="/assets/mockups/modely-s0127.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 金</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0128.png" data-nav="1" href="/zh/skin/modely-s0128/">
+            <a class="card" data-price="3" href="/zh/skin/modely-s0128/">
                 <img src="/assets/mockups/modely-s0128.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 红</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0129.png" data-nav="1" href="/zh/skin/modely-s0129/">
+            <a class="card" data-price="2" href="/zh/skin/modely-s0129/">
                 <img src="/assets/mockups/modely-s0129.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 红</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0130.png" data-nav="1" href="/zh/skin/modely-s0130/">
+            <a class="card" data-price="2" href="/zh/skin/modely-s0130/">
                 <img src="/assets/mockups/modely-s0130.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 橙</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0131.png" data-nav="1" href="/zh/skin/modely-s0131/">
+            <a class="card" data-price="1" href="/zh/skin/modely-s0131/">
                 <img src="/assets/mockups/modely-s0131.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 金</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0132.png" data-nav="1" href="/zh/skin/modely-s0132/">
+            <a class="card" data-price="2" href="/zh/skin/modely-s0132/">
                 <img src="/assets/mockups/modely-s0132.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 橙</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0133.png" data-nav="1" href="/zh/skin/modely-s0133/">
+            <a class="card" data-price="2" href="/zh/skin/modely-s0133/">
                 <img src="/assets/mockups/modely-s0133.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 金</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0134.png" data-nav="1" href="/zh/skin/modely-s0134/">
+            <a class="card" data-price="3" href="/zh/skin/modely-s0134/">
                 <img src="/assets/mockups/modely-s0134.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 红</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-modely" data-skin-url="/assets/download/modely-s0135.png" data-nav="1" href="/zh/skin/modely-s0135/">
+            <a class="card" data-price="3" href="/zh/skin/modely-s0135/">
                 <img src="/assets/mockups/modely-s0135.webp" alt="主题涂装" loading="lazy">
                 <div class="body"><div class="t">主题涂装 · 灰</div>
                 <div class="m">$3</div></div>
             </a></div>
     </div>
-</div></div>
+    </div>
+</div>
+<script>
+(function () {
+  var box = document.querySelector('.filter');
+  if (!box) return;
+  var cards = document.querySelectorAll('.picks a.card');
+  box.addEventListener('click', function (e) {
+    var b = e.target.closest('button');
+    if (!b) return;
+    box.querySelectorAll('button').forEach(function (x) { x.classList.toggle('active', x === b); });
+    var f = b.dataset.filter;
+    cards.forEach(function (c) {
+      var p = c.dataset.price === '0' ? 'free' : c.dataset.price;
+      c.style.display = (f === 'all' || p === f) ? '' : 'none';
+    });
+  });
+})();
+</script>
 
 <section id="howto"><div class="wrap">
     <h2>三步装进车机</h2>

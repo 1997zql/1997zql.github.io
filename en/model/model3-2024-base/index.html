@@ -68,6 +68,15 @@ background:#eef7ee;color:#2f6b2f;margin-left:6px}
 .viewer-static{background:radial-gradient(circle at center,#fafafa 0%,#eaeaea 100%);border-radius:12px;margin-bottom:8px;overflow:hidden;padding:22px}
 .viewer-static img{width:100%;display:block;border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,.18)}
 .viewer-static-cap{margin-top:10px;text-align:center;font-size:12px;color:#999}
+/* 面包屑 / 车型页筛选条 / 查看全部 */
+.crumbs{font-size:13px;color:#999;margin-bottom:16px}
+.crumbs a{color:#777}
+.crumbs a:hover{color:#1a1a1a}
+.crumbs .cur{color:#1a1a1a}
+.filter{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 18px}
+.filter button{border:1px solid #e5e5e5;background:#fff;border-radius:999px;padding:6px 14px;font-size:13px;color:#555;cursor:pointer}
+.filter button.active{background:#1a1a1a;color:#fff;border-color:#1a1a1a}
+.seeall{display:inline-block;margin-top:16px;font-size:14px;color:#1a1a1a;border-bottom:1px solid #1a1a1a;padding-bottom:2px}
 /* 无 GLB 的车型：静态车型图 + 短提示 */
 .viewer3d.viewer-static{height:auto;min-height:380px;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:default;background:linear-gradient(180deg,#fafafa 0%,#efefef 100%);padding:18px}
 .viewer3d.viewer-static canvas{display:none}
@@ -130,6 +139,7 @@ footer .row{display:flex;gap:18px;flex-wrap:wrap}
     <a class="logo" href="/en/">WrapKit<span>Paint Shop wrap PNG downloads</span></a>
     <nav>
         <a href="/en/">Home</a>
+        <a href="/en/free/">Free wraps</a>
         <a href="/en/#models">Vehicles</a>
         <a href="/en/#howto">How to install</a>
         
@@ -137,7 +147,9 @@ footer .row{display:flex;gap:18px;flex-wrap:wrap}
     </nav>
 </div></div></header>
 
-<div class="wrap"><div class="model-browser">
+<div class="wrap">
+    <nav class="crumbs"><a href="/en/">Home</a> › <span class="cur">Model 3 Highland</span></nav>
+    <div class="model-browser">
     <div>
         <div class="viewer-static">
             <img src="/assets/mockups/model3-2024-base-s0001.webp" alt="Model 3 Highland">
@@ -147,569 +159,594 @@ footer .row{display:flex;gap:18px;flex-wrap:wrap}
     <div>
         <h1>Model 3 Highland</h1>
         <p class="sub">112 wraps · 112 virtual wrap designs for the Model 3 Highland across multiple styles and colours. Every file matches Tesla Paint Shop specs and loads straight in.</p>
+        <div class="filter">
+            <button class="active" data-filter="all">All</button>
+            <button data-filter="free">Free</button>
+            <button data-filter="1">$1</button>
+            <button data-filter="2">$2</button>
+            <button data-filter="3">$3</button>
+        </div>
         <div class="picks">
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0001.png" data-nav="1" href="/en/skin/model3-2024-base-s0001/">
+            <a class="card" data-price="0" href="/en/skin/model3-2024-base-s0001/">
                 <img src="/assets/mockups/model3-2024-base-s0001.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Blue</div>
                 <div class="m"><span class="badge">Download free</span></div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0002.png" data-nav="1" href="/en/skin/model3-2024-base-s0002/">
+            <a class="card" data-price="0" href="/en/skin/model3-2024-base-s0002/">
                 <img src="/assets/mockups/model3-2024-base-s0002.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Gray</div>
                 <div class="m"><span class="badge">Download free</span></div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0003.png" data-nav="1" href="/en/skin/model3-2024-base-s0003/">
+            <a class="card" data-price="0" href="/en/skin/model3-2024-base-s0003/">
                 <img src="/assets/mockups/model3-2024-base-s0003.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Green</div>
                 <div class="m"><span class="badge">Download free</span></div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0004.png" data-nav="1" href="/en/skin/model3-2024-base-s0004/">
+            <a class="card" data-price="1" href="/en/skin/model3-2024-base-s0004/">
                 <img src="/assets/mockups/model3-2024-base-s0004.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Gray</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0005.png" data-nav="1" href="/en/skin/model3-2024-base-s0005/">
+            <a class="card" data-price="3" href="/en/skin/model3-2024-base-s0005/">
                 <img src="/assets/mockups/model3-2024-base-s0005.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Orange</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0006.png" data-nav="1" href="/en/skin/model3-2024-base-s0006/">
+            <a class="card" data-price="2" href="/en/skin/model3-2024-base-s0006/">
                 <img src="/assets/mockups/model3-2024-base-s0006.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Blue</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0007.png" data-nav="1" href="/en/skin/model3-2024-base-s0007/">
+            <a class="card" data-price="3" href="/en/skin/model3-2024-base-s0007/">
                 <img src="/assets/mockups/model3-2024-base-s0007.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Gold</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0008.png" data-nav="1" href="/en/skin/model3-2024-base-s0008/">
+            <a class="card" data-price="3" href="/en/skin/model3-2024-base-s0008/">
                 <img src="/assets/mockups/model3-2024-base-s0008.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Orange</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0009.png" data-nav="1" href="/en/skin/model3-2024-base-s0009/">
+            <a class="card" data-price="1" href="/en/skin/model3-2024-base-s0009/">
                 <img src="/assets/mockups/model3-2024-base-s0009.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Orange</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0010.png" data-nav="1" href="/en/skin/model3-2024-base-s0010/">
+            <a class="card" data-price="2" href="/en/skin/model3-2024-base-s0010/">
                 <img src="/assets/mockups/model3-2024-base-s0010.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Blue</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0011.png" data-nav="1" href="/en/skin/model3-2024-base-s0011/">
+            <a class="card" data-price="2" href="/en/skin/model3-2024-base-s0011/">
                 <img src="/assets/mockups/model3-2024-base-s0011.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Orange</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0012.png" data-nav="1" href="/en/skin/model3-2024-base-s0012/">
+            <a class="card" data-price="3" href="/en/skin/model3-2024-base-s0012/">
                 <img src="/assets/mockups/model3-2024-base-s0012.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Blue</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0013.png" data-nav="1" href="/en/skin/model3-2024-base-s0013/">
+            <a class="card" data-price="2" href="/en/skin/model3-2024-base-s0013/">
                 <img src="/assets/mockups/model3-2024-base-s0013.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Teal</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0014.png" data-nav="1" href="/en/skin/model3-2024-base-s0014/">
+            <a class="card" data-price="1" href="/en/skin/model3-2024-base-s0014/">
                 <img src="/assets/mockups/model3-2024-base-s0014.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Blue</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0015.png" data-nav="1" href="/en/skin/model3-2024-base-s0015/">
+            <a class="card" data-price="2" href="/en/skin/model3-2024-base-s0015/">
                 <img src="/assets/mockups/model3-2024-base-s0015.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Gray</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0016.png" data-nav="1" href="/en/skin/model3-2024-base-s0016/">
+            <a class="card" data-price="3" href="/en/skin/model3-2024-base-s0016/">
                 <img src="/assets/mockups/model3-2024-base-s0016.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Blue</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0017.png" data-nav="1" href="/en/skin/model3-2024-base-s0017/">
+            <a class="card" data-price="2" href="/en/skin/model3-2024-base-s0017/">
                 <img src="/assets/mockups/model3-2024-base-s0017.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Green</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0018.png" data-nav="1" href="/en/skin/model3-2024-base-s0018/">
+            <a class="card" data-price="0" href="/en/skin/model3-2024-base-s0018/">
                 <img src="/assets/mockups/model3-2024-base-s0018.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Blue</div>
                 <div class="m"><span class="badge">Download free</span></div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0019.png" data-nav="1" href="/en/skin/model3-2024-base-s0019/">
+            <a class="card" data-price="1" href="/en/skin/model3-2024-base-s0019/">
                 <img src="/assets/mockups/model3-2024-base-s0019.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Black</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0020.png" data-nav="1" href="/en/skin/model3-2024-base-s0020/">
+            <a class="card" data-price="2" href="/en/skin/model3-2024-base-s0020/">
                 <img src="/assets/mockups/model3-2024-base-s0020.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0021.png" data-nav="1" href="/en/skin/model3-2024-base-s0021/">
+            <a class="card" data-price="2" href="/en/skin/model3-2024-base-s0021/">
                 <img src="/assets/mockups/model3-2024-base-s0021.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Gray</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0022.png" data-nav="1" href="/en/skin/model3-2024-base-s0022/">
+            <a class="card" data-price="3" href="/en/skin/model3-2024-base-s0022/">
                 <img src="/assets/mockups/model3-2024-base-s0022.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Blue</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0023.png" data-nav="1" href="/en/skin/model3-2024-base-s0023/">
+            <a class="card" data-price="3" href="/en/skin/model3-2024-base-s0023/">
                 <img src="/assets/mockups/model3-2024-base-s0023.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Black</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0024.png" data-nav="1" href="/en/skin/model3-2024-base-s0024/">
+            <a class="card" data-price="3" href="/en/skin/model3-2024-base-s0024/">
                 <img src="/assets/mockups/model3-2024-base-s0024.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Black</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0025.png" data-nav="1" href="/en/skin/model3-2024-base-s0025/">
+            <a class="card" data-price="1" href="/en/skin/model3-2024-base-s0025/">
                 <img src="/assets/mockups/model3-2024-base-s0025.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Orange</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0026.png" data-nav="1" href="/en/skin/model3-2024-base-s0026/">
+            <a class="card" data-price="2" href="/en/skin/model3-2024-base-s0026/">
                 <img src="/assets/mockups/model3-2024-base-s0026.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0027.png" data-nav="1" href="/en/skin/model3-2024-base-s0027/">
+            <a class="card" data-price="3" href="/en/skin/model3-2024-base-s0027/">
                 <img src="/assets/mockups/model3-2024-base-s0027.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Blue</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0028.png" data-nav="1" href="/en/skin/model3-2024-base-s0028/">
+            <a class="card" data-price="1" href="/en/skin/model3-2024-base-s0028/">
                 <img src="/assets/mockups/model3-2024-base-s0028.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Green</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0029.png" data-nav="1" href="/en/skin/model3-2024-base-s0029/">
+            <a class="card" data-price="2" href="/en/skin/model3-2024-base-s0029/">
                 <img src="/assets/mockups/model3-2024-base-s0029.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Blue</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0030.png" data-nav="1" href="/en/skin/model3-2024-base-s0030/">
+            <a class="card" data-price="1" href="/en/skin/model3-2024-base-s0030/">
                 <img src="/assets/mockups/model3-2024-base-s0030.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Gray</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0031.png" data-nav="1" href="/en/skin/model3-2024-base-s0031/">
+            <a class="card" data-price="2" href="/en/skin/model3-2024-base-s0031/">
                 <img src="/assets/mockups/model3-2024-base-s0031.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Orange</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0032.png" data-nav="1" href="/en/skin/model3-2024-base-s0032/">
+            <a class="card" data-price="3" href="/en/skin/model3-2024-base-s0032/">
                 <img src="/assets/mockups/model3-2024-base-s0032.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · White</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0033.png" data-nav="1" href="/en/skin/model3-2024-base-s0033/">
+            <a class="card" data-price="0" href="/en/skin/model3-2024-base-s0033/">
                 <img src="/assets/mockups/model3-2024-base-s0033.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Blue</div>
                 <div class="m"><span class="badge">Download free</span></div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0034.png" data-nav="1" href="/en/skin/model3-2024-base-s0034/">
+            <a class="card" data-price="1" href="/en/skin/model3-2024-base-s0034/">
                 <img src="/assets/mockups/model3-2024-base-s0034.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · White</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0035.png" data-nav="1" href="/en/skin/model3-2024-base-s0035/">
+            <a class="card" data-price="1" href="/en/skin/model3-2024-base-s0035/">
                 <img src="/assets/mockups/model3-2024-base-s0035.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Blue</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0036.png" data-nav="1" href="/en/skin/model3-2024-base-s0036/">
+            <a class="card" data-price="2" href="/en/skin/model3-2024-base-s0036/">
                 <img src="/assets/mockups/model3-2024-base-s0036.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Orange</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0037.png" data-nav="1" href="/en/skin/model3-2024-base-s0037/">
+            <a class="card" data-price="1" href="/en/skin/model3-2024-base-s0037/">
                 <img src="/assets/mockups/model3-2024-base-s0037.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Blue</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0038.png" data-nav="1" href="/en/skin/model3-2024-base-s0038/">
+            <a class="card" data-price="2" href="/en/skin/model3-2024-base-s0038/">
                 <img src="/assets/mockups/model3-2024-base-s0038.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Blue</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0039.png" data-nav="1" href="/en/skin/model3-2024-base-s0039/">
+            <a class="card" data-price="1" href="/en/skin/model3-2024-base-s0039/">
                 <img src="/assets/mockups/model3-2024-base-s0039.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Gold</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0040.png" data-nav="1" href="/en/skin/model3-2024-base-s0040/">
+            <a class="card" data-price="1" href="/en/skin/model3-2024-base-s0040/">
                 <img src="/assets/mockups/model3-2024-base-s0040.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Blue</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0041.png" data-nav="1" href="/en/skin/model3-2024-base-s0041/">
+            <a class="card" data-price="1" href="/en/skin/model3-2024-base-s0041/">
                 <img src="/assets/mockups/model3-2024-base-s0041.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Blue</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0042.png" data-nav="1" href="/en/skin/model3-2024-base-s0042/">
+            <a class="card" data-price="3" href="/en/skin/model3-2024-base-s0042/">
                 <img src="/assets/mockups/model3-2024-base-s0042.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Purple</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0043.png" data-nav="1" href="/en/skin/model3-2024-base-s0043/">
+            <a class="card" data-price="1" href="/en/skin/model3-2024-base-s0043/">
                 <img src="/assets/mockups/model3-2024-base-s0043.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · White</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0044.png" data-nav="1" href="/en/skin/model3-2024-base-s0044/">
+            <a class="card" data-price="1" href="/en/skin/model3-2024-base-s0044/">
                 <img src="/assets/mockups/model3-2024-base-s0044.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Gray</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0045.png" data-nav="1" href="/en/skin/model3-2024-base-s0045/">
+            <a class="card" data-price="3" href="/en/skin/model3-2024-base-s0045/">
                 <img src="/assets/mockups/model3-2024-base-s0045.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0046.png" data-nav="1" href="/en/skin/model3-2024-base-s0046/">
+            <a class="card" data-price="2" href="/en/skin/model3-2024-base-s0046/">
                 <img src="/assets/mockups/model3-2024-base-s0046.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0047.png" data-nav="1" href="/en/skin/model3-2024-base-s0047/">
+            <a class="card" data-price="2" href="/en/skin/model3-2024-base-s0047/">
                 <img src="/assets/mockups/model3-2024-base-s0047.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Orange</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0048.png" data-nav="1" href="/en/skin/model3-2024-base-s0048/">
+            <a class="card" data-price="0" href="/en/skin/model3-2024-base-s0048/">
                 <img src="/assets/mockups/model3-2024-base-s0048.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · White</div>
                 <div class="m"><span class="badge">Download free</span></div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0049.png" data-nav="1" href="/en/skin/model3-2024-base-s0049/">
+            <a class="card" data-price="1" href="/en/skin/model3-2024-base-s0049/">
                 <img src="/assets/mockups/model3-2024-base-s0049.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · White</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0050.png" data-nav="1" href="/en/skin/model3-2024-base-s0050/">
+            <a class="card" data-price="3" href="/en/skin/model3-2024-base-s0050/">
                 <img src="/assets/mockups/model3-2024-base-s0050.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Gray</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0051.png" data-nav="1" href="/en/skin/model3-2024-base-s0051/">
+            <a class="card" data-price="1" href="/en/skin/model3-2024-base-s0051/">
                 <img src="/assets/mockups/model3-2024-base-s0051.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0052.png" data-nav="1" href="/en/skin/model3-2024-base-s0052/">
+            <a class="card" data-price="2" href="/en/skin/model3-2024-base-s0052/">
                 <img src="/assets/mockups/model3-2024-base-s0052.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0053.png" data-nav="1" href="/en/skin/model3-2024-base-s0053/">
+            <a class="card" data-price="2" href="/en/skin/model3-2024-base-s0053/">
                 <img src="/assets/mockups/model3-2024-base-s0053.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Black</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0054.png" data-nav="1" href="/en/skin/model3-2024-base-s0054/">
+            <a class="card" data-price="2" href="/en/skin/model3-2024-base-s0054/">
                 <img src="/assets/mockups/model3-2024-base-s0054.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Blue</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0055.png" data-nav="1" href="/en/skin/model3-2024-base-s0055/">
+            <a class="card" data-price="2" href="/en/skin/model3-2024-base-s0055/">
                 <img src="/assets/mockups/model3-2024-base-s0055.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0056.png" data-nav="1" href="/en/skin/model3-2024-base-s0056/">
+            <a class="card" data-price="2" href="/en/skin/model3-2024-base-s0056/">
                 <img src="/assets/mockups/model3-2024-base-s0056.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Blue</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0057.png" data-nav="1" href="/en/skin/model3-2024-base-s0057/">
+            <a class="card" data-price="2" href="/en/skin/model3-2024-base-s0057/">
                 <img src="/assets/mockups/model3-2024-base-s0057.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0058.png" data-nav="1" href="/en/skin/model3-2024-base-s0058/">
+            <a class="card" data-price="2" href="/en/skin/model3-2024-base-s0058/">
                 <img src="/assets/mockups/model3-2024-base-s0058.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · White</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0059.png" data-nav="1" href="/en/skin/model3-2024-base-s0059/">
+            <a class="card" data-price="1" href="/en/skin/model3-2024-base-s0059/">
                 <img src="/assets/mockups/model3-2024-base-s0059.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0060.png" data-nav="1" href="/en/skin/model3-2024-base-s0060/">
+            <a class="card" data-price="1" href="/en/skin/model3-2024-base-s0060/">
                 <img src="/assets/mockups/model3-2024-base-s0060.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Black</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0061.png" data-nav="1" href="/en/skin/model3-2024-base-s0061/">
+            <a class="card" data-price="2" href="/en/skin/model3-2024-base-s0061/">
                 <img src="/assets/mockups/model3-2024-base-s0061.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0062.png" data-nav="1" href="/en/skin/model3-2024-base-s0062/">
+            <a class="card" data-price="2" href="/en/skin/model3-2024-base-s0062/">
                 <img src="/assets/mockups/model3-2024-base-s0062.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Black</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0063.png" data-nav="1" href="/en/skin/model3-2024-base-s0063/">
+            <a class="card" data-price="0" href="/en/skin/model3-2024-base-s0063/">
                 <img src="/assets/mockups/model3-2024-base-s0063.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Gray</div>
                 <div class="m"><span class="badge">Download free</span></div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0064.png" data-nav="1" href="/en/skin/model3-2024-base-s0064/">
+            <a class="card" data-price="3" href="/en/skin/model3-2024-base-s0064/">
                 <img src="/assets/mockups/model3-2024-base-s0064.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Blue</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0065.png" data-nav="1" href="/en/skin/model3-2024-base-s0065/">
+            <a class="card" data-price="2" href="/en/skin/model3-2024-base-s0065/">
                 <img src="/assets/mockups/model3-2024-base-s0065.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · White</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0066.png" data-nav="1" href="/en/skin/model3-2024-base-s0066/">
+            <a class="card" data-price="1" href="/en/skin/model3-2024-base-s0066/">
                 <img src="/assets/mockups/model3-2024-base-s0066.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Blue</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0067.png" data-nav="1" href="/en/skin/model3-2024-base-s0067/">
+            <a class="card" data-price="1" href="/en/skin/model3-2024-base-s0067/">
                 <img src="/assets/mockups/model3-2024-base-s0067.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Black</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0068.png" data-nav="1" href="/en/skin/model3-2024-base-s0068/">
+            <a class="card" data-price="3" href="/en/skin/model3-2024-base-s0068/">
                 <img src="/assets/mockups/model3-2024-base-s0068.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Blue</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0069.png" data-nav="1" href="/en/skin/model3-2024-base-s0069/">
+            <a class="card" data-price="2" href="/en/skin/model3-2024-base-s0069/">
                 <img src="/assets/mockups/model3-2024-base-s0069.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Gray</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0070.png" data-nav="1" href="/en/skin/model3-2024-base-s0070/">
+            <a class="card" data-price="3" href="/en/skin/model3-2024-base-s0070/">
                 <img src="/assets/mockups/model3-2024-base-s0070.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Black</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0071.png" data-nav="1" href="/en/skin/model3-2024-base-s0071/">
+            <a class="card" data-price="2" href="/en/skin/model3-2024-base-s0071/">
                 <img src="/assets/mockups/model3-2024-base-s0071.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Green</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0072.png" data-nav="1" href="/en/skin/model3-2024-base-s0072/">
+            <a class="card" data-price="2" href="/en/skin/model3-2024-base-s0072/">
                 <img src="/assets/mockups/model3-2024-base-s0072.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Orange</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0073.png" data-nav="1" href="/en/skin/model3-2024-base-s0073/">
+            <a class="card" data-price="2" href="/en/skin/model3-2024-base-s0073/">
                 <img src="/assets/mockups/model3-2024-base-s0073.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Teal</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0074.png" data-nav="1" href="/en/skin/model3-2024-base-s0074/">
+            <a class="card" data-price="2" href="/en/skin/model3-2024-base-s0074/">
                 <img src="/assets/mockups/model3-2024-base-s0074.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Black</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0075.png" data-nav="1" href="/en/skin/model3-2024-base-s0075/">
+            <a class="card" data-price="1" href="/en/skin/model3-2024-base-s0075/">
                 <img src="/assets/mockups/model3-2024-base-s0075.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · White</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0076.png" data-nav="1" href="/en/skin/model3-2024-base-s0076/">
+            <a class="card" data-price="1" href="/en/skin/model3-2024-base-s0076/">
                 <img src="/assets/mockups/model3-2024-base-s0076.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Orange</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0077.png" data-nav="1" href="/en/skin/model3-2024-base-s0077/">
+            <a class="card" data-price="2" href="/en/skin/model3-2024-base-s0077/">
                 <img src="/assets/mockups/model3-2024-base-s0077.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Teal</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0078.png" data-nav="1" href="/en/skin/model3-2024-base-s0078/">
+            <a class="card" data-price="0" href="/en/skin/model3-2024-base-s0078/">
                 <img src="/assets/mockups/model3-2024-base-s0078.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m"><span class="badge">Download free</span></div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0079.png" data-nav="1" href="/en/skin/model3-2024-base-s0079/">
+            <a class="card" data-price="2" href="/en/skin/model3-2024-base-s0079/">
                 <img src="/assets/mockups/model3-2024-base-s0079.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Orange</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0080.png" data-nav="1" href="/en/skin/model3-2024-base-s0080/">
+            <a class="card" data-price="2" href="/en/skin/model3-2024-base-s0080/">
                 <img src="/assets/mockups/model3-2024-base-s0080.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · White</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0081.png" data-nav="1" href="/en/skin/model3-2024-base-s0081/">
+            <a class="card" data-price="3" href="/en/skin/model3-2024-base-s0081/">
                 <img src="/assets/mockups/model3-2024-base-s0081.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Blue</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0082.png" data-nav="1" href="/en/skin/model3-2024-base-s0082/">
+            <a class="card" data-price="3" href="/en/skin/model3-2024-base-s0082/">
                 <img src="/assets/mockups/model3-2024-base-s0082.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · White</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0083.png" data-nav="1" href="/en/skin/model3-2024-base-s0083/">
+            <a class="card" data-price="1" href="/en/skin/model3-2024-base-s0083/">
                 <img src="/assets/mockups/model3-2024-base-s0083.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Black</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0084.png" data-nav="1" href="/en/skin/model3-2024-base-s0084/">
+            <a class="card" data-price="3" href="/en/skin/model3-2024-base-s0084/">
                 <img src="/assets/mockups/model3-2024-base-s0084.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Blue</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0085.png" data-nav="1" href="/en/skin/model3-2024-base-s0085/">
+            <a class="card" data-price="3" href="/en/skin/model3-2024-base-s0085/">
                 <img src="/assets/mockups/model3-2024-base-s0085.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0086.png" data-nav="1" href="/en/skin/model3-2024-base-s0086/">
+            <a class="card" data-price="3" href="/en/skin/model3-2024-base-s0086/">
                 <img src="/assets/mockups/model3-2024-base-s0086.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · White</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0087.png" data-nav="1" href="/en/skin/model3-2024-base-s0087/">
+            <a class="card" data-price="2" href="/en/skin/model3-2024-base-s0087/">
                 <img src="/assets/mockups/model3-2024-base-s0087.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0088.png" data-nav="1" href="/en/skin/model3-2024-base-s0088/">
+            <a class="card" data-price="2" href="/en/skin/model3-2024-base-s0088/">
                 <img src="/assets/mockups/model3-2024-base-s0088.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0089.png" data-nav="1" href="/en/skin/model3-2024-base-s0089/">
+            <a class="card" data-price="3" href="/en/skin/model3-2024-base-s0089/">
                 <img src="/assets/mockups/model3-2024-base-s0089.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0090.png" data-nav="1" href="/en/skin/model3-2024-base-s0090/">
+            <a class="card" data-price="2" href="/en/skin/model3-2024-base-s0090/">
                 <img src="/assets/mockups/model3-2024-base-s0090.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0091.png" data-nav="1" href="/en/skin/model3-2024-base-s0091/">
+            <a class="card" data-price="2" href="/en/skin/model3-2024-base-s0091/">
                 <img src="/assets/mockups/model3-2024-base-s0091.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Gold</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0092.png" data-nav="1" href="/en/skin/model3-2024-base-s0092/">
+            <a class="card" data-price="3" href="/en/skin/model3-2024-base-s0092/">
                 <img src="/assets/mockups/model3-2024-base-s0092.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Orange</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0093.png" data-nav="1" href="/en/skin/model3-2024-base-s0093/">
+            <a class="card" data-price="0" href="/en/skin/model3-2024-base-s0093/">
                 <img src="/assets/mockups/model3-2024-base-s0093.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · White</div>
                 <div class="m"><span class="badge">Download free</span></div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0094.png" data-nav="1" href="/en/skin/model3-2024-base-s0094/">
+            <a class="card" data-price="3" href="/en/skin/model3-2024-base-s0094/">
                 <img src="/assets/mockups/model3-2024-base-s0094.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Orange</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0095.png" data-nav="1" href="/en/skin/model3-2024-base-s0095/">
+            <a class="card" data-price="3" href="/en/skin/model3-2024-base-s0095/">
                 <img src="/assets/mockups/model3-2024-base-s0095.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Orange</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0096.png" data-nav="1" href="/en/skin/model3-2024-base-s0096/">
+            <a class="card" data-price="3" href="/en/skin/model3-2024-base-s0096/">
                 <img src="/assets/mockups/model3-2024-base-s0096.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Orange</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0097.png" data-nav="1" href="/en/skin/model3-2024-base-s0097/">
+            <a class="card" data-price="1" href="/en/skin/model3-2024-base-s0097/">
                 <img src="/assets/mockups/model3-2024-base-s0097.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · White</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0098.png" data-nav="1" href="/en/skin/model3-2024-base-s0098/">
+            <a class="card" data-price="1" href="/en/skin/model3-2024-base-s0098/">
                 <img src="/assets/mockups/model3-2024-base-s0098.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0099.png" data-nav="1" href="/en/skin/model3-2024-base-s0099/">
+            <a class="card" data-price="1" href="/en/skin/model3-2024-base-s0099/">
                 <img src="/assets/mockups/model3-2024-base-s0099.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Black</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0100.png" data-nav="1" href="/en/skin/model3-2024-base-s0100/">
+            <a class="card" data-price="3" href="/en/skin/model3-2024-base-s0100/">
                 <img src="/assets/mockups/model3-2024-base-s0100.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0101.png" data-nav="1" href="/en/skin/model3-2024-base-s0101/">
+            <a class="card" data-price="1" href="/en/skin/model3-2024-base-s0101/">
                 <img src="/assets/mockups/model3-2024-base-s0101.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Pink</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0102.png" data-nav="1" href="/en/skin/model3-2024-base-s0102/">
+            <a class="card" data-price="3" href="/en/skin/model3-2024-base-s0102/">
                 <img src="/assets/mockups/model3-2024-base-s0102.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · White</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0103.png" data-nav="1" href="/en/skin/model3-2024-base-s0103/">
+            <a class="card" data-price="2" href="/en/skin/model3-2024-base-s0103/">
                 <img src="/assets/mockups/model3-2024-base-s0103.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Pink</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0104.png" data-nav="1" href="/en/skin/model3-2024-base-s0104/">
+            <a class="card" data-price="2" href="/en/skin/model3-2024-base-s0104/">
                 <img src="/assets/mockups/model3-2024-base-s0104.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0105.png" data-nav="1" href="/en/skin/model3-2024-base-s0105/">
+            <a class="card" data-price="1" href="/en/skin/model3-2024-base-s0105/">
                 <img src="/assets/mockups/model3-2024-base-s0105.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Blue</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0106.png" data-nav="1" href="/en/skin/model3-2024-base-s0106/">
+            <a class="card" data-price="1" href="/en/skin/model3-2024-base-s0106/">
                 <img src="/assets/mockups/model3-2024-base-s0106.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · White</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0107.png" data-nav="1" href="/en/skin/model3-2024-base-s0107/">
+            <a class="card" data-price="2" href="/en/skin/model3-2024-base-s0107/">
                 <img src="/assets/mockups/model3-2024-base-s0107.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0108.png" data-nav="1" href="/en/skin/model3-2024-base-s0108/">
+            <a class="card" data-price="0" href="/en/skin/model3-2024-base-s0108/">
                 <img src="/assets/mockups/model3-2024-base-s0108.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Teal</div>
                 <div class="m"><span class="badge">Download free</span></div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0109.png" data-nav="1" href="/en/skin/model3-2024-base-s0109/">
+            <a class="card" data-price="2" href="/en/skin/model3-2024-base-s0109/">
                 <img src="/assets/mockups/model3-2024-base-s0109.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Black</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0110.png" data-nav="1" href="/en/skin/model3-2024-base-s0110/">
+            <a class="card" data-price="2" href="/en/skin/model3-2024-base-s0110/">
                 <img src="/assets/mockups/model3-2024-base-s0110.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Orange</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0111.png" data-nav="1" href="/en/skin/model3-2024-base-s0111/">
+            <a class="card" data-price="1" href="/en/skin/model3-2024-base-s0111/">
                 <img src="/assets/mockups/model3-2024-base-s0111.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Green</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3-2024-base" data-skin-url="/assets/download/model3-2024-base-s0112.png" data-nav="1" href="/en/skin/model3-2024-base-s0112/">
+            <a class="card" data-price="2" href="/en/skin/model3-2024-base-s0112/">
                 <img src="/assets/mockups/model3-2024-base-s0112.webp" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Blue</div>
                 <div class="m">$2</div></div>
             </a></div>
     </div>
-</div></div>
+    </div>
+</div>
+<script>
+(function () {
+  var box = document.querySelector('.filter');
+  if (!box) return;
+  var cards = document.querySelectorAll('.picks a.card');
+  box.addEventListener('click', function (e) {
+    var b = e.target.closest('button');
+    if (!b) return;
+    box.querySelectorAll('button').forEach(function (x) { x.classList.toggle('active', x === b); });
+    var f = b.dataset.filter;
+    cards.forEach(function (c) {
+      var p = c.dataset.price === '0' ? 'free' : c.dataset.price;
+      c.style.display = (f === 'all' || p === f) ? '' : 'none';
+    });
+  });
+})();
+</script>
 
 <section id="howto"><div class="wrap">
     <h2>Install in three steps</h2>

@@ -68,6 +68,15 @@ background:#eef7ee;color:#2f6b2f;margin-left:6px}
 .viewer-static{background:radial-gradient(circle at center,#fafafa 0%,#eaeaea 100%);border-radius:12px;margin-bottom:8px;overflow:hidden;padding:22px}
 .viewer-static img{width:100%;display:block;border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,.18)}
 .viewer-static-cap{margin-top:10px;text-align:center;font-size:12px;color:#999}
+/* 面包屑 / 车型页筛选条 / 查看全部 */
+.crumbs{font-size:13px;color:#999;margin-bottom:16px}
+.crumbs a{color:#777}
+.crumbs a:hover{color:#1a1a1a}
+.crumbs .cur{color:#1a1a1a}
+.filter{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 18px}
+.filter button{border:1px solid #e5e5e5;background:#fff;border-radius:999px;padding:6px 14px;font-size:13px;color:#555;cursor:pointer}
+.filter button.active{background:#1a1a1a;color:#fff;border-color:#1a1a1a}
+.seeall{display:inline-block;margin-top:16px;font-size:14px;color:#1a1a1a;border-bottom:1px solid #1a1a1a;padding-bottom:2px}
 /* 无 GLB 的车型：静态车型图 + 短提示 */
 .viewer3d.viewer-static{height:auto;min-height:380px;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:default;background:linear-gradient(180deg,#fafafa 0%,#efefef 100%);padding:18px}
 .viewer3d.viewer-static canvas{display:none}
@@ -130,6 +139,7 @@ footer .row{display:flex;gap:18px;flex-wrap:wrap}
     <a class="logo" href="/en/">WrapKit<span>Paint Shop wrap PNG downloads</span></a>
     <nav>
         <a href="/en/">Home</a>
+        <a href="/en/free/">Free wraps</a>
         <a href="/en/#models">Vehicles</a>
         <a href="/en/#howto">How to install</a>
         
@@ -137,7 +147,9 @@ footer .row{display:flex;gap:18px;flex-wrap:wrap}
     </nav>
 </div></div></header>
 
-<div class="wrap"><div class="model-browser">
+<div class="wrap">
+    <nav class="crumbs"><a href="/en/">Home</a> › <span class="cur">Model 3</span></nav>
+    <div class="model-browser">
     <div>
         <div id="viewer-model3" class="viewer3d viewer"
              data-model="model3"
@@ -153,354 +165,379 @@ footer .row{display:flex;gap:18px;flex-wrap:wrap}
     <div>
         <h1>Model 3</h1>
         <p class="sub">69 wraps · 69 virtual wrap designs for the Model 3 across multiple styles and colours. Every file matches Tesla Paint Shop specs and loads straight in.</p>
+        <div class="filter">
+            <button class="active" data-filter="all">All</button>
+            <button data-filter="free">Free</button>
+            <button data-filter="1">$1</button>
+            <button data-filter="2">$2</button>
+            <button data-filter="3">$3</button>
+        </div>
         <div class="picks">
-            <a class="card" data-viewer="viewer-model3" data-skin-url="/assets/download/model3-s0001.png" data-nav="1" href="/en/skin/model3-s0001/">
+            <a class="card" data-price="0" href="/en/skin/model3-s0001/">
                 <img src="/assets/renders/model3-s0001.png" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · White</div>
                 <div class="m"><span class="badge">Download free</span></div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3" data-skin-url="/assets/download/model3-s0002.png" data-nav="1" href="/en/skin/model3-s0002/">
+            <a class="card" data-price="0" href="/en/skin/model3-s0002/">
                 <img src="/assets/renders/model3-s0002.png" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · White</div>
                 <div class="m"><span class="badge">Download free</span></div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3" data-skin-url="/assets/download/model3-s0003.png" data-nav="1" href="/en/skin/model3-s0003/">
+            <a class="card" data-price="0" href="/en/skin/model3-s0003/">
                 <img src="/assets/renders/model3-s0003.png" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Blue</div>
                 <div class="m"><span class="badge">Download free</span></div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3" data-skin-url="/assets/download/model3-s0004.png" data-nav="1" href="/en/skin/model3-s0004/">
+            <a class="card" data-price="2" href="/en/skin/model3-s0004/">
                 <img src="/assets/renders/model3-s0004.png" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Gray</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3" data-skin-url="/assets/download/model3-s0005.png" data-nav="1" href="/en/skin/model3-s0005/">
+            <a class="card" data-price="1" href="/en/skin/model3-s0005/">
                 <img src="/assets/renders/model3-s0005.png" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Blue</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3" data-skin-url="/assets/download/model3-s0006.png" data-nav="1" href="/en/skin/model3-s0006/">
+            <a class="card" data-price="3" href="/en/skin/model3-s0006/">
                 <img src="/assets/renders/model3-s0006.png" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Purple</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3" data-skin-url="/assets/download/model3-s0007.png" data-nav="1" href="/en/skin/model3-s0007/">
+            <a class="card" data-price="2" href="/en/skin/model3-s0007/">
                 <img src="/assets/renders/model3-s0007.png" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · White</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3" data-skin-url="/assets/download/model3-s0008.png" data-nav="1" href="/en/skin/model3-s0008/">
+            <a class="card" data-price="1" href="/en/skin/model3-s0008/">
                 <img src="/assets/renders/model3-s0008.png" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Orange</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3" data-skin-url="/assets/download/model3-s0009.png" data-nav="1" href="/en/skin/model3-s0009/">
+            <a class="card" data-price="2" href="/en/skin/model3-s0009/">
                 <img src="/assets/renders/model3-s0009.png" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Blue</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3" data-skin-url="/assets/download/model3-s0010.png" data-nav="1" href="/en/skin/model3-s0010/">
+            <a class="card" data-price="3" href="/en/skin/model3-s0010/">
                 <img src="/assets/renders/model3-s0010.png" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3" data-skin-url="/assets/download/model3-s0011.png" data-nav="1" href="/en/skin/model3-s0011/">
+            <a class="card" data-price="1" href="/en/skin/model3-s0011/">
                 <img src="/assets/renders/model3-s0011.png" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Blue</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3" data-skin-url="/assets/download/model3-s0012.png" data-nav="1" href="/en/skin/model3-s0012/">
+            <a class="card" data-price="1" href="/en/skin/model3-s0012/">
                 <img src="/assets/renders/model3-s0012.png" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Gold</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3" data-skin-url="/assets/download/model3-s0013.png" data-nav="1" href="/en/skin/model3-s0013/">
+            <a class="card" data-price="2" href="/en/skin/model3-s0013/">
                 <img src="/assets/renders/model3-s0013.png" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Blue</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3" data-skin-url="/assets/download/model3-s0014.png" data-nav="1" href="/en/skin/model3-s0014/">
+            <a class="card" data-price="1" href="/en/skin/model3-s0014/">
                 <img src="/assets/renders/model3-s0014.png" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Teal</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3" data-skin-url="/assets/download/model3-s0015.png" data-nav="1" href="/en/skin/model3-s0015/">
+            <a class="card" data-price="2" href="/en/skin/model3-s0015/">
                 <img src="/assets/renders/model3-s0015.png" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3" data-skin-url="/assets/download/model3-s0016.png" data-nav="1" href="/en/skin/model3-s0016/">
+            <a class="card" data-price="3" href="/en/skin/model3-s0016/">
                 <img src="/assets/renders/model3-s0016.png" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Blue</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3" data-skin-url="/assets/download/model3-s0017.png" data-nav="1" href="/en/skin/model3-s0017/">
+            <a class="card" data-price="3" href="/en/skin/model3-s0017/">
                 <img src="/assets/renders/model3-s0017.png" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Gold</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3" data-skin-url="/assets/download/model3-s0018.png" data-nav="1" href="/en/skin/model3-s0018/">
+            <a class="card" data-price="0" href="/en/skin/model3-s0018/">
                 <img src="/assets/renders/model3-s0018.png" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Teal</div>
                 <div class="m"><span class="badge">Download free</span></div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3" data-skin-url="/assets/download/model3-s0019.png" data-nav="1" href="/en/skin/model3-s0019/">
+            <a class="card" data-price="2" href="/en/skin/model3-s0019/">
                 <img src="/assets/renders/model3-s0019.png" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · White</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3" data-skin-url="/assets/download/model3-s0020.png" data-nav="1" href="/en/skin/model3-s0020/">
+            <a class="card" data-price="3" href="/en/skin/model3-s0020/">
                 <img src="/assets/renders/model3-s0020.png" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3" data-skin-url="/assets/download/model3-s0021.png" data-nav="1" href="/en/skin/model3-s0021/">
+            <a class="card" data-price="3" href="/en/skin/model3-s0021/">
                 <img src="/assets/renders/model3-s0021.png" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Gray</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3" data-skin-url="/assets/download/model3-s0022.png" data-nav="1" href="/en/skin/model3-s0022/">
+            <a class="card" data-price="1" href="/en/skin/model3-s0022/">
                 <img src="/assets/renders/model3-s0022.png" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Orange</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3" data-skin-url="/assets/download/model3-s0023.png" data-nav="1" href="/en/skin/model3-s0023/">
+            <a class="card" data-price="3" href="/en/skin/model3-s0023/">
                 <img src="/assets/renders/model3-s0023.png" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · White</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3" data-skin-url="/assets/download/model3-s0024.png" data-nav="1" href="/en/skin/model3-s0024/">
+            <a class="card" data-price="1" href="/en/skin/model3-s0024/">
                 <img src="/assets/renders/model3-s0024.png" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3" data-skin-url="/assets/download/model3-s0025.png" data-nav="1" href="/en/skin/model3-s0025/">
+            <a class="card" data-price="2" href="/en/skin/model3-s0025/">
                 <img src="/assets/renders/model3-s0025.png" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3" data-skin-url="/assets/download/model3-s0026.png" data-nav="1" href="/en/skin/model3-s0026/">
+            <a class="card" data-price="1" href="/en/skin/model3-s0026/">
                 <img src="/assets/renders/model3-s0026.png" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3" data-skin-url="/assets/download/model3-s0027.png" data-nav="1" href="/en/skin/model3-s0027/">
+            <a class="card" data-price="1" href="/en/skin/model3-s0027/">
                 <img src="/assets/renders/model3-s0027.png" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3" data-skin-url="/assets/download/model3-s0028.png" data-nav="1" href="/en/skin/model3-s0028/">
+            <a class="card" data-price="2" href="/en/skin/model3-s0028/">
                 <img src="/assets/renders/model3-s0028.png" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Gold</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3" data-skin-url="/assets/download/model3-s0029.png" data-nav="1" href="/en/skin/model3-s0029/">
+            <a class="card" data-price="2" href="/en/skin/model3-s0029/">
                 <img src="/assets/renders/model3-s0029.png" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Teal</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3" data-skin-url="/assets/download/model3-s0030.png" data-nav="1" href="/en/skin/model3-s0030/">
+            <a class="card" data-price="1" href="/en/skin/model3-s0030/">
                 <img src="/assets/renders/model3-s0030.png" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Green</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3" data-skin-url="/assets/download/model3-s0031.png" data-nav="1" href="/en/skin/model3-s0031/">
+            <a class="card" data-price="2" href="/en/skin/model3-s0031/">
                 <img src="/assets/renders/model3-s0031.png" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Orange</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3" data-skin-url="/assets/download/model3-s0032.png" data-nav="1" href="/en/skin/model3-s0032/">
+            <a class="card" data-price="3" href="/en/skin/model3-s0032/">
                 <img src="/assets/renders/model3-s0032.png" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Black</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3" data-skin-url="/assets/download/model3-s0033.png" data-nav="1" href="/en/skin/model3-s0033/">
+            <a class="card" data-price="0" href="/en/skin/model3-s0033/">
                 <img src="/assets/renders/model3-s0033.png" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Green</div>
                 <div class="m"><span class="badge">Download free</span></div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3" data-skin-url="/assets/download/model3-s0034.png" data-nav="1" href="/en/skin/model3-s0034/">
+            <a class="card" data-price="2" href="/en/skin/model3-s0034/">
                 <img src="/assets/renders/model3-s0034.png" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Blue</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3" data-skin-url="/assets/download/model3-s0035.png" data-nav="1" href="/en/skin/model3-s0035/">
+            <a class="card" data-price="2" href="/en/skin/model3-s0035/">
                 <img src="/assets/renders/model3-s0035.png" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Orange</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3" data-skin-url="/assets/download/model3-s0036.png" data-nav="1" href="/en/skin/model3-s0036/">
+            <a class="card" data-price="2" href="/en/skin/model3-s0036/">
                 <img src="/assets/renders/model3-s0036.png" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Orange</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3" data-skin-url="/assets/download/model3-s0037.png" data-nav="1" href="/en/skin/model3-s0037/">
+            <a class="card" data-price="3" href="/en/skin/model3-s0037/">
                 <img src="/assets/renders/model3-s0037.png" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Blue</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3" data-skin-url="/assets/download/model3-s0038.png" data-nav="1" href="/en/skin/model3-s0038/">
+            <a class="card" data-price="3" href="/en/skin/model3-s0038/">
                 <img src="/assets/renders/model3-s0038.png" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3" data-skin-url="/assets/download/model3-s0039.png" data-nav="1" href="/en/skin/model3-s0039/">
+            <a class="card" data-price="2" href="/en/skin/model3-s0039/">
                 <img src="/assets/renders/model3-s0039.png" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Gray</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3" data-skin-url="/assets/download/model3-s0040.png" data-nav="1" href="/en/skin/model3-s0040/">
+            <a class="card" data-price="1" href="/en/skin/model3-s0040/">
                 <img src="/assets/renders/model3-s0040.png" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Blue</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3" data-skin-url="/assets/download/model3-s0041.png" data-nav="1" href="/en/skin/model3-s0041/">
+            <a class="card" data-price="3" href="/en/skin/model3-s0041/">
                 <img src="/assets/renders/model3-s0041.png" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Blue</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3" data-skin-url="/assets/download/model3-s0042.png" data-nav="1" href="/en/skin/model3-s0042/">
+            <a class="card" data-price="2" href="/en/skin/model3-s0042/">
                 <img src="/assets/renders/model3-s0042.png" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Blue</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3" data-skin-url="/assets/download/model3-s0043.png" data-nav="1" href="/en/skin/model3-s0043/">
+            <a class="card" data-price="2" href="/en/skin/model3-s0043/">
                 <img src="/assets/renders/model3-s0043.png" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Orange</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3" data-skin-url="/assets/download/model3-s0044.png" data-nav="1" href="/en/skin/model3-s0044/">
+            <a class="card" data-price="2" href="/en/skin/model3-s0044/">
                 <img src="/assets/renders/model3-s0044.png" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Blue</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3" data-skin-url="/assets/download/model3-s0045.png" data-nav="1" href="/en/skin/model3-s0045/">
+            <a class="card" data-price="3" href="/en/skin/model3-s0045/">
                 <img src="/assets/renders/model3-s0045.png" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Teal</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3" data-skin-url="/assets/download/model3-s0046.png" data-nav="1" href="/en/skin/model3-s0046/">
+            <a class="card" data-price="2" href="/en/skin/model3-s0046/">
                 <img src="/assets/renders/model3-s0046.png" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3" data-skin-url="/assets/download/model3-s0047.png" data-nav="1" href="/en/skin/model3-s0047/">
+            <a class="card" data-price="3" href="/en/skin/model3-s0047/">
                 <img src="/assets/renders/model3-s0047.png" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3" data-skin-url="/assets/download/model3-s0048.png" data-nav="1" href="/en/skin/model3-s0048/">
+            <a class="card" data-price="0" href="/en/skin/model3-s0048/">
                 <img src="/assets/renders/model3-s0048.png" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · White</div>
                 <div class="m"><span class="badge">Download free</span></div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3" data-skin-url="/assets/download/model3-s0049.png" data-nav="1" href="/en/skin/model3-s0049/">
+            <a class="card" data-price="1" href="/en/skin/model3-s0049/">
                 <img src="/assets/renders/model3-s0049.png" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Teal</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3" data-skin-url="/assets/download/model3-s0050.png" data-nav="1" href="/en/skin/model3-s0050/">
+            <a class="card" data-price="2" href="/en/skin/model3-s0050/">
                 <img src="/assets/renders/model3-s0050.png" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3" data-skin-url="/assets/download/model3-s0051.png" data-nav="1" href="/en/skin/model3-s0051/">
+            <a class="card" data-price="2" href="/en/skin/model3-s0051/">
                 <img src="/assets/renders/model3-s0051.png" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Black</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3" data-skin-url="/assets/download/model3-s0052.png" data-nav="1" href="/en/skin/model3-s0052/">
+            <a class="card" data-price="1" href="/en/skin/model3-s0052/">
                 <img src="/assets/renders/model3-s0052.png" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · White</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3" data-skin-url="/assets/download/model3-s0053.png" data-nav="1" href="/en/skin/model3-s0053/">
+            <a class="card" data-price="2" href="/en/skin/model3-s0053/">
                 <img src="/assets/renders/model3-s0053.png" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · White</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3" data-skin-url="/assets/download/model3-s0054.png" data-nav="1" href="/en/skin/model3-s0054/">
+            <a class="card" data-price="2" href="/en/skin/model3-s0054/">
                 <img src="/assets/renders/model3-s0054.png" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Gray</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3" data-skin-url="/assets/download/model3-s0055.png" data-nav="1" href="/en/skin/model3-s0055/">
+            <a class="card" data-price="1" href="/en/skin/model3-s0055/">
                 <img src="/assets/renders/model3-s0055.png" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Teal</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3" data-skin-url="/assets/download/model3-s0056.png" data-nav="1" href="/en/skin/model3-s0056/">
+            <a class="card" data-price="1" href="/en/skin/model3-s0056/">
                 <img src="/assets/renders/model3-s0056.png" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Purple</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3" data-skin-url="/assets/download/model3-s0057.png" data-nav="1" href="/en/skin/model3-s0057/">
+            <a class="card" data-price="1" href="/en/skin/model3-s0057/">
                 <img src="/assets/renders/model3-s0057.png" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · White</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3" data-skin-url="/assets/download/model3-s0058.png" data-nav="1" href="/en/skin/model3-s0058/">
+            <a class="card" data-price="2" href="/en/skin/model3-s0058/">
                 <img src="/assets/renders/model3-s0058.png" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Green</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3" data-skin-url="/assets/download/model3-s0059.png" data-nav="1" href="/en/skin/model3-s0059/">
+            <a class="card" data-price="2" href="/en/skin/model3-s0059/">
                 <img src="/assets/renders/model3-s0059.png" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Blue</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3" data-skin-url="/assets/download/model3-s0060.png" data-nav="1" href="/en/skin/model3-s0060/">
+            <a class="card" data-price="2" href="/en/skin/model3-s0060/">
                 <img src="/assets/renders/model3-s0060.png" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Gray</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3" data-skin-url="/assets/download/model3-s0061.png" data-nav="1" href="/en/skin/model3-s0061/">
+            <a class="card" data-price="2" href="/en/skin/model3-s0061/">
                 <img src="/assets/renders/model3-s0061.png" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3" data-skin-url="/assets/download/model3-s0062.png" data-nav="1" href="/en/skin/model3-s0062/">
+            <a class="card" data-price="2" href="/en/skin/model3-s0062/">
                 <img src="/assets/renders/model3-s0062.png" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3" data-skin-url="/assets/download/model3-s0063.png" data-nav="1" href="/en/skin/model3-s0063/">
+            <a class="card" data-price="0" href="/en/skin/model3-s0063/">
                 <img src="/assets/renders/model3-s0063.png" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · White</div>
                 <div class="m"><span class="badge">Download free</span></div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3" data-skin-url="/assets/download/model3-s0064.png" data-nav="1" href="/en/skin/model3-s0064/">
+            <a class="card" data-price="1" href="/en/skin/model3-s0064/">
                 <img src="/assets/renders/model3-s0064.png" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Orange</div>
                 <div class="m">$1</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3" data-skin-url="/assets/download/model3-s0065.png" data-nav="1" href="/en/skin/model3-s0065/">
+            <a class="card" data-price="2" href="/en/skin/model3-s0065/">
                 <img src="/assets/renders/model3-s0065.png" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Gold</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3" data-skin-url="/assets/download/model3-s0066.png" data-nav="1" href="/en/skin/model3-s0066/">
+            <a class="card" data-price="2" href="/en/skin/model3-s0066/">
                 <img src="/assets/renders/model3-s0066.png" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3" data-skin-url="/assets/download/model3-s0067.png" data-nav="1" href="/en/skin/model3-s0067/">
+            <a class="card" data-price="2" href="/en/skin/model3-s0067/">
                 <img src="/assets/renders/model3-s0067.png" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Red</div>
                 <div class="m">$2</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3" data-skin-url="/assets/download/model3-s0068.png" data-nav="1" href="/en/skin/model3-s0068/">
+            <a class="card" data-price="3" href="/en/skin/model3-s0068/">
                 <img src="/assets/renders/model3-s0068.png" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Black</div>
                 <div class="m">$3</div></div>
             </a>
-            <a class="card" data-viewer="viewer-model3" data-skin-url="/assets/download/model3-s0069.png" data-nav="1" href="/en/skin/model3-s0069/">
+            <a class="card" data-price="2" href="/en/skin/model3-s0069/">
                 <img src="/assets/renders/model3-s0069.png" alt="Theme Livery" loading="lazy">
                 <div class="body"><div class="t">Theme Livery · Teal</div>
                 <div class="m">$2</div></div>
             </a></div>
     </div>
-</div></div>
+    </div>
+</div>
+<script>
+(function () {
+  var box = document.querySelector('.filter');
+  if (!box) return;
+  var cards = document.querySelectorAll('.picks a.card');
+  box.addEventListener('click', function (e) {
+    var b = e.target.closest('button');
+    if (!b) return;
+    box.querySelectorAll('button').forEach(function (x) { x.classList.toggle('active', x === b); });
+    var f = b.dataset.filter;
+    cards.forEach(function (c) {
+      var p = c.dataset.price === '0' ? 'free' : c.dataset.price;
+      c.style.display = (f === 'all' || p === f) ? '' : 'none';
+    });
+  });
+})();
+</script>
 
 <section id="howto"><div class="wrap">
     <h2>Install in three steps</h2>
