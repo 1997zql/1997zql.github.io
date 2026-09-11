@@ -150,6 +150,8 @@ class WrapViewer {
   // 换肤：UV-unwrap PNG → 车身 baseColorTexture
   apply(url) {
     if (!this.bodyMesh || !url) return;
+    // 当前皮肤指针统一在这里同步：related 点击 / apply-tex / reset 三条路径都走 apply
+    this.root.dataset.skinUrl = url;
     if (this.currentTex) { try { this.currentTex.dispose(); } catch (e) {} }
     const tex = new THREE.TextureLoader().load(url, () => {
       this.setTip(this.root.dataset.statusApplied || '已贴上该皮肤图案');
