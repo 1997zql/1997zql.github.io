@@ -6,21 +6,22 @@
     <title>My account · WrapKit</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚗</text></svg>">
     <meta name="description" content="Sign in to see wraps you&#39;ve purchased and your downloads. Purchases appear here automatically.">
-    <link rel="canonical" href="https://1997zql.github.io/en/account/">
-    <link rel="alternate" hreflang="en" href="https://1997zql.github.io/en/account/">
-    <link rel="alternate" hreflang="zh" href="https://1997zql.github.io/zh/account/">
+    <link rel="canonical" href="/en/account/">
+    <link rel="alternate" hreflang="en" href="/en/account/">
+    <link rel="alternate" hreflang="zh" href="/zh/account/">
     <meta property="og:title" content="My account · WrapKit">
     <meta property="og:description" content="Sign in to see wraps you&#39;ve purchased and your downloads. Purchases appear here automatically.">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://1997zql.github.io/assets/renders/model3-s0001.png">
+    <meta property="og:image" content="/assets/renders/model3-s0001.png">
     <meta property="og:image:width" content="900">
     <meta property="og:image:height" content="1000">
     <meta property="og:image:alt" content="My account · WrapKit">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="My account · WrapKit">
     <meta name="twitter:description" content="Sign in to see wraps you&#39;ve purchased and your downloads. Purchases appear here automatically.">
-    <meta name="twitter:image" content="https://1997zql.github.io/assets/renders/model3-s0001.png">
+    <meta name="twitter:image" content="/assets/renders/model3-s0001.png">
     <meta name="robots" content="index,follow">
+    
     <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue",Arial,sans-serif;
@@ -155,7 +156,7 @@ footer .row{display:flex;gap:18px;flex-wrap:wrap}
         <label style="display:block;font-size:13px;color:#555;margin-bottom:6px">Email</label>
         <input id="acct-email" type="email" placeholder="you@example.com" style="width:100%;padding:12px 14px;border:1px solid #ddd;border-radius:8px;font-size:15px" />
         <p style="font-size:12px;color:#999;margin:8px 0 16px">Passwordless magic-link sign in</p>
-        <button id="acct-login" class="cta" style="width:100%;text-align:center">Email me a sign-in link</button>
+        <button id="acct-login" class="cta" style="width:100%;text-align:center" data-umami-event="account-login">Email me a sign-in link</button>
         <p id="acct-msg" style="margin-top:12px;font-size:13px;color:#888"></p>
     </div>
     <div id="acct-auth" style="display:none">
@@ -203,7 +204,7 @@ footer .row{display:flex;gap:18px;flex-wrap:wrap}
         return '<div style="border:1px solid #eee;border-radius:8px;padding:12px 16px;margin-bottom:10px">'
           + '<div style="font-weight:600">' + (o.skin_id || o.id) + '</div>'
           + '<div style="font-size:13px;color:#888">' + new Date(o.created_at).toLocaleString() + '</div>'
-          + (o.file_url ? ' <a class="btn" style="margin-top:8px" href="' + o.file_url + '" download>下载</a>' : '')
+          + (o.file_url ? ' <a class="btn" style="margin-top:8px" href="' + o.file_url + '" download data-umami-event="download-order">下载</a>' : '')
           + '</div>';
       }).join('');
     } catch (e) { ordersEl.innerHTML = '<p style="color:#c00">' + txt.err + '</p>'; }
