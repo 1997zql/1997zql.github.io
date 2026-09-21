@@ -143,7 +143,7 @@ footer .row{display:flex;gap:18px;flex-wrap:wrap}
         <a href="/en/free/">Free wraps</a>
         <a href="/en/#models">Vehicles</a>
         <a href="/en/#howto">How to install</a>
-        
+        <a href="/en/account/">My account</a>
         <a class="lang" href="/zh/account/">中文</a>
     </nav>
 </div></div></header>
@@ -167,8 +167,8 @@ footer .row{display:flex;gap:18px;flex-wrap:wrap}
 </section></div>
 <script>
 (function(){
-  var URL = "https://YOUR_PROJECT.supabase.co";
-  var ANON = "YOUR_ANON_KEY";
+  var URL = "https://iiwhbdwkljmjnlreqhqo.supabase.co";
+  var ANON = "sb_publishable_SIFZUUnp3vthxxC-5Mh33g_PjgUWZQQ";
   var LANG = "en";
   var txt = {"sent":"Sign-in link sent, check your inbox","err":"Something went wrong, please retry","empty":"No purchases yet","load":"Loading…"};
   if (!URL || URL.indexOf('YOUR_') === 0) {
@@ -194,7 +194,7 @@ footer .row{display:flex;gap:18px;flex-wrap:wrap}
     try {
       var { data, error } = await sb.from('orders')
         .select('id, skin_id, file_url, price, created_at')
-        .eq('user_id', user.id);
+        .or('user_id.eq.' + user.id + ',email.eq.' + (user.email || ''));
       if (error) throw error;
       if (!data || !data.length) {
         ordersEl.innerHTML = '<p style="color:#888">' + txt.empty + '</p>';
@@ -220,7 +220,10 @@ footer .row{display:flex;gap:18px;flex-wrap:wrap}
     if (!email || !email.value) { if (msg) msg.textContent = 'Email required'; return; }
     msg.textContent = '';
     try {
-      var { error } = await sb.auth.signInWithOtp({ email: email.value });
+      var { error } = await sb.auth.signInWithOtp({
+        email: email.value,
+        options: { emailRedirectTo: URL.indexOf('localhost') >= 0 ? undefined : ('https://1997zql.github.io/' + LANG + '/account/') },
+      });
       if (error) throw error;
       msg.textContent = txt.sent;
     } catch (e) { msg.textContent = txt.err; }
